@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emocjonalny Profil Tagi</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #eef2f3;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 20px;
+            flex: 1;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #222;
+        }
+
+        .profile {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        .emotion-card {
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin: 10px;
+            flex-basis: calc(30% - 40px);
+            text-align: center;
+            transition: transform 0.3s ease-in-out;
+            border: 1px solid rgba(0, 0, 0, 0.05);
+        }
+
+        .emotion-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .emotion-icon {
+            font-size: 60px; 
+        }
+
+        .emotion-name {
+            font-size: 1.5em; 
+            margin-top: 10px;
+        }
+
+        .emotion-description {
+            font-size: 1em; 
+        }
+
+        footer {
+            background-color: #333; 
+            color: #fff; 
+            text-align: center; 
+            padding: 10px; 
+            margin-top: 20px; 
+            font-size: 0.8em; 
+        }
+
+        .license-icon {
+            width: 50px; 
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Emocjonalny Profil Tagi</h1>
+        
+        <div class="profile">
+            
+            <!-- Przykładowe karty emocji -->
+            
+            <div class="emotion-card">
+                <div class="emotion-icon">🌍</div>
+                <div class="emotion-name">Kopernik</div>
+                <div class="emotion-description">Neutralna</div>
+            </div>
+
+            <div class="emotion-card">
+                <div class="emotion-icon">💔</div>
+                <div class="emotion-name">Pożegnanie</div>
+                <div class="emotion-description">Smutek, Żal</div>
+            </div>
+
+            <div class="emotion-card">
+                <div class="emotion-icon">🔭</div>
+                <div class="emotion-name">Globus</div>
+                <div class="emotion-description">Ciekawość</div>
+            </div>
+
+            <div class="emotion-card">
+                <div class="emotion-icon">⚰️</div>
+                <div class="emotion-name">Śmierć</div>
+                <div class="emotion-description">Smutek</div>
+            </div>
+
+            <div class="emotion-card">
+                <div class="emotion-icon">😢</div>
+                <div class="emotion-name">Smutek</div>
+                <div class="emotion-description">Smutek</div>
+            </div>
+
+             <!-- Dodaj więcej kart na podstawie danych -->
+            
+        </div>
+    </div>
+
+    <!-- Stopka -->
+    <footer>
+        &copy; 2025 Wizualizacja Emocjonalnego Profilu. Licencja:
+        <a href="http://creativecommons.org/licenses/by/4.0/" target="_blank">
+          <img src="https://mirrors.creativecommons.org/presskit/icons/by.svg" alt="CC BY License" class="license-icon">
+        </a><br>
+        Wkład:<br>
+        - Zespół Badawczy (30%)<br>
+        - Ja (70%)
+    </footer>
+</body>
+</html>
