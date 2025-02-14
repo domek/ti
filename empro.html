@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emocjonalny Profil Dzieła</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #eef2f3;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            display: flex; /* Dodane, aby stopka była na dole */
+            flex-direction: column; /* Dodane, aby stopka była na dole */
+            min-height: 100vh; /* Dodane, aby stopka była na dole */
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 20px;
+            flex: 1; /* Dodane, aby kontener główny wypełniał dostępną przestrzeń */
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #222; /* Poprawiony kontrast */
+        }
+
+        .profile {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        .emotion-card {
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin: 10px;
+            flex-basis: calc(30% - 40px);
+            text-align: center;
+            transition: transform 0.3s ease-in-out;
+            border: 1px solid rgba(0, 0, 0, 0.05); /* Drobna obwódka dla lepszego rozgraniczenia */
+        }
+
+        .emotion-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .emotion-icon {
+            font-size: 60px; /* Ikona emocji */
+        }
+
+        .emotion-name {
+            font-size: 1.5em; /* Nazwa emocji */
+            margin-top: 10px;
+            color: #fff; /* Biały tekst na kolorowym tle */
+        }
+
+        .emotion-description {
+            font-size: 1em; /* Opis emocji */
+            color: #fff; /* Biały tekst na kolorowym tle */
+        }
+
+        /* Kolory dla poszczególnych emocji */
+        .gniew { background-color: #e74c3c; }
+        .radosc { background-color: #f1c40f; color: #333; } /* Żółty z ciemnym tekstem */
+        .strach { background-color: #9b59b6; }
+        .ciekawosc { background-color: #3498db; }
+        .zrozumienie { background-color: #2ecc71; }
+        .nostalgia { background-color: #e67e22; }
+        .melancholia { background-color: #95a5a6; }
+
+        footer {
+            background-color: #333; /* Ciemne tło stopki */
+            color: #fff; /* Biały tekst w stopce */
+            text-align: center; /* Wyśrodkowanie tekstu w stopce */
+            padding: 10px; /* Padding w stopce */
+            margin-top: 20px; /* Margines górny dla oddzielenia od treści */
+            font-size: 0.8em; /* Mniejszy rozmiar czcionki w stopce */
+        }
+
+        .license-icon {
+            width: 50px; /* Szerokość ikony licencji */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Emocjonalny Profil "Obłedu"</h1>
+        
+        <div class="profile">
+            <div class="emotion-card gniew">
+                <div class="emotion-icon">😡</div>
+                <div class="emotion-name">Gniew</div>
+                <div class="emotion-description">Intensywne uczucie frustracji lub niezadowolenia.</div>
+            </div>
+
+            <div class="emotion-card radosc">
+                <div class="emotion-icon">😊</div>
+                <div class="emotion-name">Radość</div>
+                <div class="emotion-description">Stan szczęścia i zadowolenia.</div>
+            </div>
+
+            <div class="emotion-card strach">
+                <div class="emotion-icon">😱</div>
+                <div class="emotion-name">Strach</div>
+                <div class="emotion-description">Reakcja na zagrożenie lub niepewność.</div>
+            </div>
+
+            <div class="emotion-card ciekawosc">
+                <div class="emotion-icon">🤔</div>
+                <div class="emotion-name">Ciekawość</div>
+                <div class="emotion-description">Chęć poznania czegoś nowego.</div>
+            </div>
+
+            <div class="emotion-card zrozumienie">
+                <div class="emotion-icon">🧠</div>
+                <div class="emotion-name">Zrozumienie</div>
+                <div class="emotion-description">Głębsza wiedza o sobie lub otaczającym świecie.</div>
+            </div>
+
+            <div class="emotion-card nostalgia">
+                <div class="emotion-icon">😌</div>
+                <div class="emotion-name">Nostalgia</div>
+                <div class="emotion-description">Tęsknota za przeszłością lub minionymi chwilami.</div>
+            </div>
+
+            <div class="emotion-card melancholia">
+                <div class="emotion-icon">😢</div>
+                <div class="emotion-name">Melancholia</div>
+                <div class="emotion-description">Stan smutku lub refleksji nad życiem.</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Stopka -->
+    <footer>
+        Wizualizacja Emocjonalnego Profilu. Licencja CC-BY:
+        <a href="http://creativecommons.org/licenses/by/4.0/" target="_blank">
+          <img src="https://mirrors.creativecommons.org/presskit/icons/by.svg" alt="CC BY License" class="license-icon">
+        </a><br>
+        Wkład:<br>
+        - Zespół Badawczy (30%)<br>
+        - Ja [perplexity] (70%)
+    </footer>
+</body>
+</html>
