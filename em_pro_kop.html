@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emocjonalny Profil grafiki pt. "Ostatnie chwile Mikołaja Kopernika"</title>  
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            background-image: url('kopernik.jpg'); /* Dodanie obrazu tła */
+            background-size: cover; /* Skalowanie tła, aby pokrywało całą stronę */
+            background-repeat: no-repeat; /* Zapobieganie powtarzaniu tła */
+            background-attachment: fixed; /* Utrzymywanie tła w stałej pozycji */
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 20px;
+            flex: 1;
+            background-color: rgba(238, 242, 243, 0.8); /* Półprzezroczysty kolor tła */
+            border-radius: 10px;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #222;
+        }
+
+        .profile {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        .emotion-card {
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin: 10px;
+            flex-basis: calc(30% - 40px);
+            text-align: center;
+            transition: transform 0.3s ease-in-out;
+            border: 1px solid rgba(0, 0, 0, 0.05);
+        }
+
+        .emotion-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .emotion-icon {
+            font-size: 60px;
+        }
+
+        .emotion-name {
+            font-size: 1.5em;
+            margin-top: 10px;
+            color: #fff;
+        }
+
+        .emotion-description {
+            font-size: 1em;
+            color: #fff;
+        }
+
+        /* Kolory dla poszczególnych emocji */
+        .smutek { background-color: #e74c3c; } /* Czerwony */
+        .ciekawość { background-color: #3498db; } /* Niebieski */
+        .wiedza { background-color: #2ecc71; } /* Zielony */
+        .nostalgia { background-color: #f39c12; } /* Pomarańczowy */
+        .powaga { background-color: #9b59b6; } /* Fioletowy */
+        .szacunek { background-color: #f1c40f; color: #333; } /* Żółty z ciemnym tekstem */
+        .religijność { background-color: #1abc9c; } /* Turkusowy */
+        .neutralna { background-color: #34495e; } /* Ciemny niebieski */
+        .troska { background-color: #e67e22; } /* Jasny pomarańczowy */
+        .zaduma { background-color: #95a5a6; } /* Szary */
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            margin-top: 20px;
+            font-size: 0.8em;
+        }
+
+        .license-icon {
+            width: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Emocjonalny profil grafiki pt. "Ostatnie chwile Mikołaja Kopernika"</h1>
+        
+        <div class="profile">
+            <!-- Smutek -->
+            <div class="emotion-card smutek">
+                <div class="emotion-icon">😢</div>
+                <div class="emotion-name">Smutek</div>
+                <div class="emotion-description">Poczucie straty lub żalu.<br><strong>14.49%</strong></div>
+            </div>
+
+            <!-- Ciekawość -->
+            <div class="emotion-card ciekawość">
+                <div class="emotion-icon">🤔</div>
+                <div class="emotion-name">Ciekawość</div>
+                <div class="emotion-description">Chęć poznania czegoś nowego.<br><strong>11.59%</strong></div>
+            </div>
+
+            <!-- Wiedza -->
+            <div class="emotion-card wiedza">
+                <div class="emotion-icon">📚</div>
+                <div class="emotion-name">Wiedza</div>
+                <div class="emotion-description">Zgłębianie tajemnic świata.<br><strong>11.59%</strong></div>
+            </div>
+
+            <!-- Nostalgia -->
+            <div class="emotion-card nostalgia">
+                <div class="emotion-icon">😌</div>
+                <div class="emotion-name">Nostalgia</div>
+                <div class="emotion-description">Tęsknota za przeszłością.<br><strong>10.14%</strong></div>
+            </div>
+
+            <!-- Powaga -->
+            <div class="emotion-card powaga">
+                <div class="emotion-icon">⚖️</div>
+                <div class="emotion-name">Powaga</div>
+                <div class="emotion-description">Uczucie odpowiedzialności i refleksji.<br><strong>10.14%</strong></div>
+            </div>
+
+            <!-- Szacunek -->
+            <div class="emotion-card szacunek">
+                <div class="emotion-icon">🙏</div>
+                <div class="emotion-name">Szacunek</div>
+                <div class="emotion-description">Uznanie wartości.<br><strong>10.14%</strong></div>
+            </div>
+            
+            <!-- Religijność -->
+            <div class="emotion-card religijność">
+                <div class="emotion-icon">⛪</div>
+                <div class="emotion-name">Religijność</div>
+                <div class="emotion-description">Związek z wiarą i duchowością.<br><strong>8.70%</strong></div>
+            </div>
+
+            <!-- Neutralna -->
+            <div class="emotion-card neutralna">
+                <div class="emotion-icon">😐</div>
+                <div class="emotion-name">Neutralna</div>
+                <div class="emotion-description">Brak emocji.<br><strong>7.25%</strong></div>
+            </div>
+
+            <!-- Troska -->
+            <div class="emotion-card troska">
+                <div class="emotion-icon">😟</div>
+                <div class="emotion-name">Troska</div>
+                <div class="emotion-description">Zmartwienie o kogoś lub coś.<br><strong>5.80%</strong></div>
+            </div>
+
+            <!-- Zaduma -->
+            <div class="emotion-card zaduma">
+                <div class="emotion-icon">🤔</div>
+                <div class="emotion-name">Zaduma</div>
+                <div class="emotion-description">Głęboka refleksja.<br><strong>5.80%</strong></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Stopka -->
+
+    <footer>
+	
+		Ta wizualizacja emocjonalnego profilu dzieła została stworzona z myślą o ukazaniu dominujących emocji, w oparciu o metodologię łączącą analizę sentymentu oraz rozpoznawanie emocji. W pierwszym etapie, lista tagów została poddana analizie, w której każdej emocji przypisano odpowiednią kategorię na podstawie kontekstu i skojarzeń. Następnie, wykorzystując biblioteki Pandas w Pythonie, zliczone zostały wystąpienia poszczególnych emocji, aby zidentyfikować te, które pojawiają się najczęściej. Na podstawie uzyskanych wyników, emocje zostały przedstawione wizualnie na stronie HTML, gdzie każda z nich otrzymała unikalny kolor tła, ikonę oraz procentowy udział, ułatwiając tym samym zrozumienie emocjonalnego charakteru dzieła.
+		</br>
+		</br>
+		</br>
+		
+        Wizualizacja Emocjonalnego Profilu. Licencja CC BY </br>
+        <a href="http://creativecommons.org/licenses/by/4.0/" target="_blank">
+          <img src="https://mirrors.creativecommons.org/presskit/icons/by.svg" alt="CC BY License" class="license-icon">
+        </a><br>
+        Wkład:<br>
+        - Człowiek (30%)<br>
+        - Ja [Perplexity] (70%)
+    </footer>
+</body>
+</html>
