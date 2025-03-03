@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emotional Profile: Obłęd V (Madness V)</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            background-image: url('obled.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 20px;
+            flex: 1;
+            background-color: rgba(238, 242, 243, 0.8);
+            border-radius: 10px;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #222;
+        }
+
+        .profile {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        .emotion-card {
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin: 10px;
+            flex-basis: calc(30% - 40px);
+            text-align: center;
+            transition: transform 0.3s ease-in-out;
+            border: 1px solid rgba(0, 0, 0, 0.05);
+        }
+
+        .emotion-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .emotion-icon {
+            font-size: 60px;
+        }
+
+        .emotion-name {
+            font-size: 1.5em;
+            margin-top: 10px;
+            color: #fff;
+        }
+
+        .emotion-description {
+            font-size: 1em;
+            color: #fff;
+        }
+
+        /* Kolory dla poszczególnych emocji */
+        .ciekawość { background-color: #3498db; }
+        .fascynacja { background-color: #9b59b6; }
+        .zamęt { background-color: #e74c3c; }
+        .niepokój { background-color: #f1c40f; color: #333; }
+        .smutek { background-color: #2ecc71; }
+        .zaduma { background-color: #95a5a6; }
+        .refleksja { background-color: #1abc9c; }
+        .strach { background-color: #e67e22; }
+        .stabilność { background-color: #34495e; }
+        .frustracja { background-color: #8e44ad; }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            margin-top: 20px;
+            font-size: 0.8em;
+        }
+
+        .license-icon {
+            width: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Emotional Profile: Obłęd V (Madness V)</h1>
+
+        <div class="profile">
+            <div class="emotion-card ciekawość">
+                <div class="emotion-icon">🤔</div>
+                <div class="emotion-name">Curiosity</div>
+                <div class="emotion-description">Desire to explore and learn. 18.66%</div>
+            </div>
+
+            <div class="emotion-card fascynacja">
+                <div class="emotion-icon">✨</div>
+                <div class="emotion-name">Fascination</div>
+                <div class="emotion-description">Captivated and intrigued. 13.43%</div>
+            </div>
+
+            <div class="emotion-card zamęt">
+                <div class="emotion-icon">🤯</div>
+                <div class="emotion-name">Confusion</div>
+                <div class="emotion-description">State of disorientation. 12.69%</div>
+            </div>
+
+            <div class="emotion-card niepokój">
+                <div class="emotion-icon">😟</div>
+                <div class="emotion-name">Anxiety</div>
+                <div class="emotion-description">Feeling of unease or worry. 11.19%</div>
+            </div>
+
+            <div class="emotion-card smutek">
+                <div class="emotion-icon">😢</div>
+                <div class="emotion-name">Sadness</div>
+                <div class="emotion-description">State of sorrow or grief. 10.45%</div>
+            </div>
+
+            <div class="emotion-card zaduma">
+                <div class="emotion-icon">🤔</div>
+                <div class="emotion-name">Contemplation</div>
+                <div class="emotion-description">Engaged in deep thought. 7.46%</div>
+            </div>
+
+            <div class="emotion-card refleksja">
+                <div class="emotion-icon">🧠</div>
+                <div class="emotion-name">Reflection</div>
+                <div class="emotion-description">Serious thought or consideration. 6.72%</div>
+            </div>
+
+            <div class="emotion-card strach">
+                <div class="emotion-icon">😨</div>
+                <div class="emotion-name">Fear</div>
+                <div class="emotion-description">Unpleasant emotion caused by threat. 5.97%</div>
+            </div>
+
+            <div class="emotion-card stabilność">
+                <div class="emotion-icon">💪</div>
+                <div class="emotion-name">Stability</div>
+                <div class="emotion-description">State of being firm or steadfast. 5.22%</div>
+            </div>
+
+             <div class="emotion-card frustracja">
+                <div class="emotion-icon">😠</div>
+                <div class="emotion-name">Frustration</div>
+                <div class="emotion-description">Feeling of being upset or annoyed. 4.48%</div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        2025 Emotional Profile Visualization. License CC BY: <br><br>
+        <a href="http://creativecommons.org/licenses/by/4.0/" target="_blank">
+            <img src="https://mirrors.creativecommons.org/presskit/icons/by.svg" alt="CC BY License" class="license-icon">
+        </a><br>
+        Contribution:<br>
+        - Research Team (30%)<br>
+        - AI Assistance (70%)
+    </footer>
+</body>
+</html>
