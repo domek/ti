@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Emotional Profile: A Volunteer for the Lifeboat - Maria Dorothea Robinson</title>
+    <title>Emotional Profile: A Volunteer for the Lifeboat</title>
     <style>
         body {
             font-family: 'Arial', sans-serif;
@@ -28,7 +28,6 @@
             border-radius: 10px;
         }
 
-
         h1 {
             text-align: center;
             color: #333;
@@ -36,19 +35,29 @@
         }
 
         .emotion-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-start; /* Wyrównaj do lewej */
         }
 
         .emotion-card {
-            background-color: #e8f5e9; /* Default background */
+            width: calc(33.333% - 20px); /* Dokładnie 3 karty w rzędzie */
+            min-width: 250px;
+            margin: 10px;
             border-radius: 10px;
             padding: 20px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
             text-align: center;
+            color: #fff;
+            box-sizing: border-box;
         }
-
+        /* Kontener dla ostatniej karty */
+        .last-card-container {
+            width: 100%;
+            display: flex;
+            justify-content: center; /* Wyśrodkuj element */
+        }
+        
         .emotion-card:hover {
             transform: translateY(-5px);
             transition: transform 0.3s ease-in-out;
@@ -62,102 +71,113 @@
         .emotion-name {
             font-size: 1.5em;
             font-weight: bold;
-            color: #333;
         }
 
         .emotion-description {
-            color: #555;
+            font-size: 1em;
         }
 
+        /* Kolory dla emocji */
+        .anxiety { background-color:#e74c3c; }
+        .fear { background-color:#f39c12; }
+        .anger { background-color:#d35400; }
+        .frustration { background-color:#3498db; }
+        .determination { background-color:#2ecc71; }
+        .sadness { background-color:#9b59b6; }
+        .hope { background-color:#1abc9c; }
+        .confusion { background-color:#34495e; }
+        .cooperation { background-color:#f1c40f; }
+        .empathy { background-color:#e67e22; }
+
         footer {
+            background-color: #333;
+            color: #fff;
             text-align: center;
+            padding: 10px;
             margin-top: 20px;
-            padding-top: 10px;
-            border-top: 1px solid #ddd;
+            font-size: 0.8em;
+        }
+
+        .license-icon {
+            width: 50px;
+        }
+        footer p {
+            margin: 5px 0;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>Emotional Profile: A Volunteer for the Lifeboat - Maria Dorothea Robinson</h1>
-        
+        <h1>Emotional Profile: A Volunteer for the Lifeboat</h1>
+
         <div class="emotion-grid">
-            
-            <!-- Anxiety -->
-            <div class="emotion-card" style="background-color:#ffebee;">
+
+            <div class="emotion-card anxiety">
                 <div class="emotion-icon">😟</div>
                 <div class="emotion-name">Anxiety</div>
                 <div class="emotion-description">Feeling of unease or worry. (14.4%)</div>
             </div>
 
-            <!-- Fear -->
-            <div class="emotion-card" style="background-color:#fff8e1;">
+            <div class="emotion-card fear">
                 <div class="emotion-icon">😨</div>
                 <div class="emotion-name">Fear</div>
                 <div class="emotion-description">Unpleasant emotion caused by threat. (12.0%)</div>
-            </div>
 
-            <!-- Anger -->
-            <div class="emotion-card" style="background-color:#ffe0b2;">
+            </div>
+            <div class="emotion-card anger">
                 <div class="emotion-icon">😡</div>
                 <div class="emotion-name">Anger</div>
                 <div class="emotion-description">Strong feeling of annoyance or hostility. (9.6%)</div>
             </div>
 
-            <!-- Frustration -->
-            <div class="emotion-card" style="background-color:#e3f2fd;">
+            <div class="emotion-card frustration">
                 <div class="emotion-icon">😠</div>
                 <div class="emotion-name">Frustration</div>
                 <div class="emotion-description">Feeling of being upset or annoyed. (8.0%)</div>
             </div>
 
-            <!-- Determination -->
-            <div class="emotion-card" style="background-color:#ede7f6;">
+            <div class="emotion-card determination">
                 <div class="emotion-icon">💪</div>
                 <div class="emotion-name">Determination</div>
                 <div class="emotion-description">Firmness of purpose and resolve. (7.2%)</div>
             </div>
 
-            <!-- Sadness -->
-            <div class="emotion-card" style="background-color:#f3e5f5;">
+            <div class="emotion-card sadness">
                 <div class="emotion-icon">😢</div>
                 <div class="emotion-name">Sadness</div>
                 <div class="emotion-description">State of sorrow or grief. (6.4%)</div>
             </div>
 
-            <!-- Hope -->
-            <div class="emotion-card" style="background-color:#e8f5e9;">
+            <div class="emotion-card hope">
                 <div class="emotion-icon">🌟</div>
                 <div class="emotion-name">Hope</div>
                 <div class="emotion-description">Optimism and expectation for the future. (5.6%)</div>
             </div>
 
-            <!-- Confusion -->
-            <div class="emotion-card" style="background-color:#ede7f6;">
+            <div class="emotion-card confusion">
                 <div class="emotion-icon">🤯</div>
                 <div class="emotion-name">Confusion</div>
                 <div class="emotion-description">State of disorientation or lack of clarity. (4.8%)</div>
             </div>
 
-           <!-- Cooperation -->
-           <div class="emotion-card" style="background-color:#fffde7;">
-               <div class="emotion-icon">🤝</div>
-               <div class="emotion-name">Cooperation</div>
-               <div class="emotion-description">Working together towards a common goal. (4.0%)</div>
+            <div class="emotion-card cooperation">
+                <div class="emotion-icon">🤝</div>
+                <div class="emotion-name">Cooperation</div>
+                <div class="emotion-description">Working together towards a common goal. (4.0%)</div>
+            </div>
+
            </div>
+                <!-- Kontener dla ostatniej karty "Empatii" -->
+                <div class="last-card-container">
+                    <div class="emotion-card empathy">
+                        <div class="emotion-icon">❤️</div>
+                        <div class="emotion-name">Empathy</div>
+                        <div class="emotion-description">Understanding and sharing the feelings of others. (3.2%)</div>
+                    </div>
+                </div>
+            
+    </div>
 
-           <!-- Empathy -->
-           <div class="emotion-card" style="background-color:#e1f5fe;">
-               <div class="emotion-icon">❤️</div>
-               <div class="emotion-name">Empathy</div>
-               <div class="emotion-description">Understanding and sharing the feelings of others. (3.2%)</div>
-           </div>
-
-       </div>
-
-    </footer>
-
-    <!-- Footer -->
     <footer>
         Emotional Profile Visualization<br><br>
 		
@@ -171,3 +191,5 @@
         - Research Team (30%)<br>
         - AI Assistance (70%)
     </footer>
+</body>
+</html>
