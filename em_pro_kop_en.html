@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emotional Profile of the Artwork: "The Last Moments of Nicolaus Copernicus"</title>  
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            background-image: url('kopernik.jpg'); /* Adding a background image */
+            background-size: cover; /* Scaling the background to cover the entire page */
+            background-repeat: no-repeat; /* Preventing the background from repeating */
+            background-attachment: fixed; /* Keeping the background in a fixed position */
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 20px;
+            flex: 1;
+            background-color: rgba(238, 242, 243, 0.8); /* Semi-transparent background color */
+            border-radius: 10px;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #222;
+        }
+
+        .profile {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        .emotion-card {
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin: 10px;
+            flex-basis: calc(30% - 40px);
+            text-align: center;
+            transition: transform 0.3s ease-in-out;
+            border: 1px solid rgba(0, 0, 0, 0.05);
+        }
+
+        .emotion-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .emotion-icon {
+            font-size: 60px;
+        }
+
+        .emotion-name {
+            font-size: 1.5em;
+            margin-top: 10px;
+            color: #fff;
+        }
+
+        .emotion-description {
+            font-size: 1em;
+            color: #fff;
+        }
+
+        /* Colors for specific emotions */
+        .smutek { background-color: #e74c3c; } /* Red */
+        .ciekawość { background-color: #3498db; } /* Blue */
+        .wiedza { background-color: #2ecc71; } /* Green */
+        .nostalgia { background-color: #f39c12; } /* Orange */
+        .powaga { background-color: #9b59b6; } /* Purple */
+        .szacunek { background-color: #f1c40f; color: #333; } /* Yellow with dark text */
+        .religijność { background-color: #1abc9c; } /* Turquoise */
+        .neutralna { background-color: #34495e; } /* Dark blue */
+        .troska { background-color: #e67e22; } /* Light orange */
+        .zaduma { background-color: #95a5a6; } /* Gray */
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            margin-top: 20px;
+            font-size: 0.8em;
+        }
+
+        .license-icon {
+            width: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Emotional Profile of the Artwork: "The Last Moments of Nicolaus Copernicus"</h1>
+        
+        <div class="profile">
+            <!-- Sadness -->
+            <div class="emotion-card smutek">
+                <div class="emotion-icon">😢</div>
+                <div class="emotion-name">Sadness</div>
+                <div class="emotion-description">A sense of loss or regret.<br><strong>14.49%</strong></div>
+            </div>
+
+            <!-- Curiosity -->
+            <div class="emotion-card ciekawość">
+                <div class="emotion-icon">🤔</div>
+                <div class="emotion-name">Curiosity</div>
+                <div class="emotion-description">A desire to learn something new.<br><strong>11.59%</strong></div>
+            </div>
+
+            <!-- Knowledge -->
+            <div class="emotion-card wiedza">
+                <div class="emotion-icon">📚</div>
+                <div class="emotion-name">Knowledge</div>
+                <div class="emotion-description">Exploring the mysteries of the world.<br><strong>11.59%</strong></div>
+            </div>
+
+            <!-- Nostalgia -->
+            <div class="emotion-card nostalgia">
+                <div class="emotion-icon">😌</div>
+                <div class="emotion-name">Nostalgia</div>
+                <div class="emotion-description">Longing for the past.<br><strong>10.14%</strong></div>
+            </div>
+
+            <!-- Seriousness -->
+            <div class="emotion-card powaga">
+                <div class="emotion-icon">⚖️</div>
+                <div class="emotion-name">Seriousness</div>
+                <div class="emotion-description">A feeling of responsibility and reflection.<br><strong>10.14%</strong></div>
+            </div>
+
+            <!-- Respect -->
+            <div class="emotion-card szacunek">
+                <div class="emotion-icon">🙏</div>
+                <div class="emotion-name">Respect</div>
+                <div class="emotion-description">Recognition of value.<br><strong>10.14%</strong></div>
+            </div>
+            
+            <!-- Religiosity -->
+            <div class="emotion-card religijność">
+                <div class="emotion-icon">⛪</div>
+                <div class="emotion-name">Religiosity</div>
+                <div class="emotion-description">Connection with faith and spirituality.<br><strong>8.70%</strong></div>
+            </div>
+
+            <!-- Neutral -->
+            <div class="emotion-card neutralna">
+                <div class="emotion-icon">😐</div>
+                <div class="emotion-name">Neutral</div>
+                <div class="emotion-description">Lack of emotion.<br><strong>7.25%</strong></div>
+            </div>
+
+            <!-- Concern -->
+            <div class="emotion-card troska">
+                <div class="emotion-icon">😟</div>
+                <div class="emotion-name">Concern</div>
+                <div class="emotion-description">Worrying about someone or something.<br><strong>5.80%</strong></div>
+            </div>
+
+            <!-- Contemplation -->
+            <div class="emotion-card zaduma">
+                <div class="emotion-icon">🤔</div>
+                <div class="emotion-name">Contemplation</div>
+                <div class="emotion-description">Deep reflection.<br><strong>5.80%</strong></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+	
+		This visualization of the emotional profile of the artwork was created to showcase dominant emotions, based on a methodology combining sentiment analysis and emotion recognition. In the first stage, the list of tags was analyzed, where each emotion was assigned an appropriate category based on context and associations. Next, using Pandas libraries in Python, the occurrences of individual emotions were counted to identify those that appear most frequently. Based on the results obtained, emotions were visually presented on the HTML page, where each was assigned a unique background color, icon, and percentage share, facilitating an understanding of the artwork's emotional character.
+		</br>
+		</br>
+		</br>
+		
+        Emotional Profile Visualization. CC BY License </br>
+        <a href="http://creativecommons.org/licenses/by/4.0/" target="_blank">
+          <img src="https://mirrors.creativecommons.org/presskit/icons/by.svg" alt="CC BY License" class="license-icon">
+        </a><br>
+        Contribution:<br>
+        - Human (30%)<br>
+        - Me [Perplexity] (70%)
+    </footer>
+</body>
+</html>
