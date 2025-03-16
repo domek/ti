@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emotional Profile: A Volunteer for the Lifeboat - Maria Dorothea Robinson</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            background-image: url('volunteer_for_the_lifeboat.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 20px;
+            flex: 1;
+            background-color: rgba(238, 242, 243, 0.8);
+            border-radius: 10px;
+        }
+
+
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .emotion-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .emotion-card {
+            background-color: #e8f5e9; /* Default background */
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .emotion-card:hover {
+            transform: translateY(-5px);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .emotion-icon {
+            font-size: 3em;
+            margin-bottom: 10px;
+        }
+
+        .emotion-name {
+            font-size: 1.5em;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .emotion-description {
+            color: #555;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            padding-top: 10px;
+            border-top: 1px solid #ddd;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Emotional Profile: A Volunteer for the Lifeboat - Maria Dorothea Robinson</h1>
+        
+        <div class="emotion-grid">
+            
+            <!-- Anxiety -->
+            <div class="emotion-card" style="background-color:#ffebee;">
+                <div class="emotion-icon">😟</div>
+                <div class="emotion-name">Anxiety</div>
+                <div class="emotion-description">Feeling of unease or worry. (14.4%)</div>
+            </div>
+
+            <!-- Fear -->
+            <div class="emotion-card" style="background-color:#fff8e1;">
+                <div class="emotion-icon">😨</div>
+                <div class="emotion-name">Fear</div>
+                <div class="emotion-description">Unpleasant emotion caused by threat. (12.0%)</div>
+            </div>
+
+            <!-- Anger -->
+            <div class="emotion-card" style="background-color:#ffe0b2;">
+                <div class="emotion-icon">😡</div>
+                <div class="emotion-name">Anger</div>
+                <div class="emotion-description">Strong feeling of annoyance or hostility. (9.6%)</div>
+            </div>
+
+            <!-- Frustration -->
+            <div class="emotion-card" style="background-color:#e3f2fd;">
+                <div class="emotion-icon">😠</div>
+                <div class="emotion-name">Frustration</div>
+                <div class="emotion-description">Feeling of being upset or annoyed. (8.0%)</div>
+            </div>
+
+            <!-- Determination -->
+            <div class="emotion-card" style="background-color:#ede7f6;">
+                <div class="emotion-icon">💪</div>
+                <div class="emotion-name">Determination</div>
+                <div class="emotion-description">Firmness of purpose and resolve. (7.2%)</div>
+            </div>
+
+            <!-- Sadness -->
+            <div class="emotion-card" style="background-color:#f3e5f5;">
+                <div class="emotion-icon">😢</div>
+                <div class="emotion-name">Sadness</div>
+                <div class="emotion-description">State of sorrow or grief. (6.4%)</div>
+            </div>
+
+            <!-- Hope -->
+            <div class="emotion-card" style="background-color:#e8f5e9;">
+                <div class="emotion-icon">🌟</div>
+                <div class="emotion-name">Hope</div>
+                <div class="emotion-description">Optimism and expectation for the future. (5.6%)</div>
+            </div>
+
+            <!-- Confusion -->
+            <div class="emotion-card" style="background-color:#ede7f6;">
+                <div class="emotion-icon">🤯</div>
+                <div class="emotion-name">Confusion</div>
+                <div class="emotion-description">State of disorientation or lack of clarity. (4.8%)</div>
+            </div>
+
+           <!-- Cooperation -->
+           <div class="emotion-card" style="background-color:#fffde7;">
+               <div class="emotion-icon">🤝</div>
+               <div class="emotion-name">Cooperation</div>
+               <div class="emotion-description">Working together towards a common goal. (4.0%)</div>
+           </div>
+
+           <!-- Empathy -->
+           <div class="emotion-card" style="background-color:#e1f5fe;">
+               <div class="emotion-icon">❤️</div>
+               <div class="emotion-name">Empathy</div>
+               <div class="emotion-description">Understanding and sharing the feelings of others. (3.2%)</div>
+           </div>
+
+       </div>
+
+    </footer>
+
+    <!-- Footer -->
+    <footer>
+        Emotional Profile Visualization<br><br>
+		
+		        This emotional profile visualization was created to showcase dominant emotions, based on a methodology combining sentiment analysis and emotion recognition. In the first stage, the list of tags was analyzed, where each emotion was assigned an appropriate category based on context and associations. Then, using Pandas libraries in Python, the occurrences of individual emotions were counted to identify those that appear most frequently. Based on the results obtained, emotions were presented visually on the HTML page, where each of them received a unique background color, icon, and percentage share, thereby facilitating understanding of the emotional character of the work.<br>
+		
+		License CC BY 4.0<br>
+        <a href="http://creativecommons.org/licenses/by/4.0/" target="_blank">
+            <img src="./Emotional Profile_ Obłęd V (Madness V)_files/by.svg" alt="CC BY License" class="license-icon">
+        </a><br>
+        Contribution:<br>
+        - Research Team (30%)<br>
+        - AI Assistance (70%)
+    </footer>
