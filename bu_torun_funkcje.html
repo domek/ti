@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biblioteka Uniwersytecka w Toruniu - Odkrywamy Nowe Horyzonty</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --kopernikowy-niebieski: #1B365D;
+            --kosmiczny-szary: #F5F7FA;
+            --gwiezdny-blask: #FFD700;
+            --orbitalna-zielen: #2E8B57;
+            --galaxia-fiolet: #6B46C1;
+            --nebula-cyan: #06B6D4;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--kopernikowy-niebieski);
+            background: linear-gradient(135deg, var(--kosmiczny-szary) 0%, #E0E7FF 100%);
+            overflow-x: hidden;
+        }
+
+        .stars {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        .star {
+            position: absolute;
+            width: 2px;
+            height: 2px;
+            background: var(--gwiezdny-blask);
+            border-radius: 50%;
+            animation: twinkle 2s infinite alternate;
+        }
+
+        @keyframes twinkle {
+            from { opacity: 0.3; }
+            to { opacity: 1; }
+        }
+
+        .header {
+            background: linear-gradient(135deg, var(--kopernikowy-niebieski) 0%, var(--galaxia-fiolet) 100%);
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .header::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,215,0,0.1) 0%, transparent 70%);
+            animation: rotate 20s linear infinite;
+        }
+
+        @keyframes rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        .header h1 {
+            font-size: 3rem;
+            margin-bottom: 0.5rem;
+            position: relative;
+            z-index: 2;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .header p {
+            font-size: 1.3rem;
+            position: relative;
+            z-index: 2;
+            opacity: 0.9;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .stats-banner {
+            background: linear-gradient(45deg, var(--orbitalna-zielen), var(--nebula-cyan));
+            color: white;
+            padding: 2rem 0;
+            margin: 2rem 0;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            text-align: center;
+        }
+
+        .stat-item {
+            padding: 1rem;
+            background: rgba(255,255,255,0.1);
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: bold;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        .functions-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .function-card {
+            background: white;
+            border-radius: 20px;
+            padding: 2rem;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .function-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(90deg, var(--galaxia-fiolet), var(--nebula-cyan), var(--orbitalna-zielen));
+        }
+
+        .function-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+        }
+
+        .function-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .function-title {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+            color: var(--kopernikowy-niebieski);
+        }
+
+        .ai-assistant {
+            background: linear-gradient(135deg, var(--galaxia-fiolet), var(--nebula-cyan));
+            color: white;
+            border-radius: 20px;
+            padding: 2rem;
+            margin: 3rem 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .ai-assistant::before {
+            content: '🤖';
+            position: absolute;
+            top: -20px;
+            right: -20px;
+            font-size: 6rem;
+            opacity: 0.1;
+        }
+
+        .digital-humanities {
+            background: linear-gradient(135deg, var(--orbitalna-zielen), var(--gwiezdny-blask));
+            color: white;
+            border-radius: 20px;
+            padding: 2rem;
+            margin: 3rem 0;
+        }
+
+        .visit-button {
+            display: inline-block;
+            background: linear-gradient(45deg, var(--orbitalna-zielen), var(--nebula-cyan));
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.2rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            margin: 2rem 0;
+        }
+
+        .visit-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+        }
+
+        .footer {
+            background: var(--kopernikowy-niebieski);
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+            margin-top: 4rem;
+        }
+
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2rem;
+            }
+            
+            .functions-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .container {
+                padding: 0 1rem;
+            }
+        }
+
+        .pulse {
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+
+        .glow {
+            animation: glow 3s ease-in-out infinite alternate;
+        }
+
+        @keyframes glow {
+            from { text-shadow: 0 0 5px var(--gwiezdny-blask), 0 0 10px var(--gwiezdny-blask); }
+            to { text-shadow: 0 0 10px var(--gwiezdny-blask), 0 0 20px var(--gwiezdny-blask); }
+        }
+    </style>
+</head>
+<body>
+    <div class="stars" id="stars"></div>
+    
+    <header class="header">
+        <div class="container">
+            <h1 class="glow">🌟 Biblioteka Uniwersytecka w Toruniu</h1>
+            <p>Odkrywamy nowe horyzonty wiedzy w duchu Kopernika</p>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="stats-banner">
+            <h2 style="text-align: center; margin-bottom: 2rem; font-size: 2rem;">📊 Biblioteka w Liczbach</h2>
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <span class="stat-number">57.387</span>
+                    <span>Zarejestrowanych użytkowników</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">161.000</span>
+                    <span>Odwiedzin rocznie</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">400k+</span>
+                    <span>Zbiorów w wolnym dostępie</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">1.190.000</span>
+                    <span>Sesji w zasobach elektronicznych</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">215.000</span>
+                    <span>Udostępnień materiałów</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">62</span>
+                    <span>Bazy danych (licencje)</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="functions-grid">
+            <div class="function-card">
+                <span class="function-icon">🔍</span>
+                <h3 class="function-title">Katalog Zintegrowany z Biblioteką Narodową</h3>
+                <p>Współkatalogowanie z Biblioteką Narodową zapewnia dostęp do bogatych opisów bibliograficznych. Nasz katalog <strong>szukaj.bu.umk.pl</strong> łączy lokalne zbiory z krajowym zasobem wiedzy, oferując użytkownikom pełną informację o dostępnych materiałach.</p>
+            </div>
+
+            <div class="function-card">
+                <span class="function-icon">💾</span>
+                <h3 class="function-title">Kujawsko-Pomorska Biblioteka Cyfrowa</h3>
+                <p>Digitalizujemy i udostępniamy unikalne zbiory regionalne oraz historyczne. Nasza biblioteka cyfrowa zachowuje dziedzictwo kulturowe regionu, czyniąc je dostępnym dla przyszłych pokoleń w wysokiej jakości cyfrowej.</p>
+            </div>
+
+            <div class="function-card">
+                <span class="function-icon">📚</span>
+                <h3 class="function-title">Repozytorium Tekstów Naukowych</h3>
+                <p>Gromadzimy i udostępniamy w otwartym dostępie publikacje naukowe pracowników UMK. Wspieramy otwartą naukę, zwiększając widoczność badań i ułatwiając wymianę wiedzy w społeczności akademickiej.</p>
+            </div>
+
+            <div class="function-card">
+                <span class="function-icon">📊</span>
+                <h3 class="function-title">Repozytorium Danych i Oprogramowania</h3>
+                <p>Przechowujemy dane badawcze i oprogramowanie naukowe, zapewniając ich długoterminową dostępność. Wspieramy reprodukowalność badań i współpracę między zespołami badawczymi.</p>
+            </div>
+
+            <div class="function-card">
+                <span class="function-icon">🌐</span>
+                <h3 class="function-title">Wsparcie Otwartej Nauki</h3>
+                <p>Pomagamy w zarządzaniu danymi badawczymi, tworzeniu planów zarządzania danymi oraz publikowaniu w otwartym dostępie. Oferujemy szkolenia i konsultacje dla badaczy w zakresie najlepszych praktyk otwartej nauki.</p>
+            </div>
+
+            <div class="function-card">
+                <span class="function-icon">📈</span>
+                <h3 class="function-title">Upowszechnianie Wyników Badań</h3>
+                <p>Wspieramy badaczy w publikowaniu wyników w prestiżowych czasopismach, pomoc w ocenie parametrycznej jednostek naukowych oraz doradztwo bibliometryczne. Oferujemy analizy cytowań i impact factor.</p>
+            </div>
+        </div>
+
+        <div class="ai-assistant pulse">
+            <h2 style="margin-bottom: 1rem;">🤖 Asystent AI w Katalogu</h2>
+            <p style="font-size: 1.2rem;">Wprowadziliśmy sztuczną inteligencję do naszego systemu wyszukiwania! Nasz AI-asystent pomaga użytkownikom w bardziej intuicyjnym przeszukiwaniu katalogu, sugerując trafne wyniki i odpowiadając na pytania w języku naturalnym.</p>
+        </div>
+
+        <div class="digital-humanities">
+            <h2 style="margin-bottom: 1rem;">🎨 Cyfrowe Wystawy i Humanistyka Cyfrowa</h2>
+            <p style="font-size: 1.1rem; margin-bottom: 1rem;">Na platformie <strong>expo.bu.umk.pl</strong> prezentujemy fascynujące cyfrowe wystawy, które łączą tradycyjne dziedzictwo z nowoczesnymi technologiami:</p>
+            <ul style="list-style: none; padding: 0;">
+                <li>🖼️ <strong>Artyści wileńscy okresu międzywojennego</strong> - grafiki i opowieści</li>
+                <li>📜 <strong>Rękopisy średniowieczne</strong> zdigitalizowane w projekcie POPC</li>
+                <li>🎭 <strong>Dokumenty życia społecznego</strong> jako zapisy jubileuszy Kopernika</li>
+                <li>📖 <strong>Literatura XX i XXI wieku</strong> w ramach projektu EODOPEN</li>
+            </ul>
+        </div>
+
+        <div style="text-align: center; margin: 3rem 0;">
+            <a href="https://www.bu.umk.pl/kontakt" class="visit-button">
+                📍 Odwiedź nas przy ul. Gagarina 13
+            </a>
+        </div>
+
+        <div style="background: white; border-radius: 20px; padding: 2rem; margin: 3rem 0; border-left: 5px solid var(--orbitalna-zielen);">
+            <h3 style="color: var(--kopernikowy-niebieski); margin-bottom: 1rem;">💡 Dlaczego warto korzystać z naszych usług?</h3>
+            <p><strong>Jesteśmy więcej niż biblioteką</strong> - jesteśmy centrum innowacji, które łączy tradycję z nowoczesnością. Nasza misja to wspieranie badań, edukacji i rozwoju społeczności akademickiej oraz mieszkańców Torunia. W duchu Mikołaja Kopernika odkrywamy nowe sposoby udostępniania wiedzy i wspierania nauki.</p>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Biblioteka Uniwersytecka w Toruniu | Innowacje w służbie nauki i społeczeństwa</p>
+            <p style="margin-top: 0.5rem; opacity: 0.8;">✨ W duchu Kopernika odkrywamy nowe horyzonty wiedzy ✨</p>
+        </div>
+    </footer>
+
+    <script>
+        // Tworzenie animowanych gwiazd
+        function createStars() {
+            const starsContainer = document.getElementById('stars');
+            const numberOfStars = 50;
+            
+            for (let i = 0; i < numberOfStars; i++) {
+                const star = document.createElement('div');
+                star.className = 'star';
+                star.style.left = Math.random() * 100 + '%';
+                star.style.top = Math.random() * 100 + '%';
+                star.style.animationDelay = Math.random() * 2 + 's';
+                starsContainer.appendChild(star);
+            }
+        }
+
+        // Animacja liczników
+        function animateCounters() {
+            const counters = document.querySelectorAll('.stat-number');
+            
+            counters.forEach(counter => {
+                const target = counter.textContent.replace(/[^\d]/g, '');
+                const increment = parseInt(target) / 100;
+                let current = 0;
+                
+                const timer = setInterval(() => {
+                    current += increment;
+                    if (current > target) {
+                        current = target;
+                        clearInterval(timer);
+                    }
+                    
+                    if (target > 1000) {
+                        counter.textContent = Math.floor(current).toLocaleString();
+                    } else {
+                        counter.textContent = Math.floor(current);
+                    }
+                }, 20);
+            });
+        }
+
+        // Efekt paralaksy dla kart funkcji
+        function addParallaxEffect() {
+            const cards = document.querySelectorAll('.function-card');
+            
+            cards.forEach(card => {
+                card.addEventListener('mousemove', (e) => {
+                    const rect = card.getBoundingClientRect();
+                    const x = e.clientX - rect.left;
+                    const y = e.clientY - rect.top;
+                    
+                    const centerX = rect.width / 2;
+                    const centerY = rect.height / 2;
+                    
+                    const rotateX = (y - centerY) / 10;
+                    const rotateY = (centerX - x) / 10;
+                    
+                    card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateZ(10px)`;
+                });
+                
+                card.addEventListener('mouseleave', () => {
+                    card.style.transform = 'perspective(1000px) rotateX(0) rotateY(0) translateZ(0)';
+                });
+            });
+        }
+
+        // Inicjalizacja po załadowaniu strony
+        document.addEventListener('DOMContentLoaded', () => {
+            createStars();
+            
+            // Opóźnienie dla animacji liczników
+            setTimeout(animateCounters, 500);
+            
+            addParallaxEffect();
+        });
+
+        // Smooth scroll dla przycisku wizyty
+        document.querySelector('.visit-button').addEventListener('click', (e) => {
+            // Animacja kliknięcia
+            e.target.style.transform = 'scale(0.95)';
+            setTimeout(() => {
+                e.target.style.transform = 'scale(1)';
+            }, 150);
+        });
+    </script>
+</body>
+</html>
