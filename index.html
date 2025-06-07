@@ -1,13 +1,180 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Technologie Internetowe</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Kosmiczne Archiwum Wiedzy UMK - Biblioteka Uniwersytecka w Toruniu</title>
+    <meta name="description" content="Biblioteka Uniwersytecka w Toruniu - kosmiczne archiwum wiedzy z nowoczesnymi usługami cyfrowymi i animowanym układem słonecznym">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<H1>Witajcie</H1>
-<p>Strona testowa</p>
+    <!-- Cosmic Background -->
+    <div class="cosmic-bg">
+        <div class="stars"></div>
+        <div class="planets"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2>🌌 BU UMK</h2>
+            </div>
+            <button class="nav-toggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <div class="nav-menu">
+                <a href="https://szukaj.bu.umk.pl/" target="_blank" class="nav-link">Katalog</a>
+                <a href="https://expo.bu.umk.pl/" target="_blank" class="nav-link">Wystawy Cyfrowe</a>
+                <a href="#otwarta-nauka" class="nav-link">Otwarta Nauka</a>
+                <a href="#repozytoria" class="nav-link">Repozytoria</a>
+                <a href="https://www.bu.umk.pl/kontakt" target="_blank" class="nav-link">Kontakt</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section with Solar System -->
+    <section class="hero">
+        <div class="container">
+            <!-- Solar System Animation -->
+            <div class="solar-system">
+                <div class="sun"></div>
+                <div class="earth-orbit">
+                    <div class="earth">
+                        <div class="moon-orbit">
+                            <div class="moon"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <h1 class="hero-title">Kosmiczne Archiwum Wiedzy</h1>
+            <p class="hero-subtitle">Odkrywaj 550-letnie dziedzictwo naukowe UMK<br>w nowoczesnej formie cyfrowej</p>
+            <div class="hero-buttons">
+                <a href="https://szukaj.bu.umk.pl/" target="_blank" class="btn btn--primary btn--lg">🔍 Rozpocznij poszukiwania</a>
+                <a href="https://www.bu.umk.pl/kontakt" target="_blank" class="btn btn--secondary btn--lg">📍 Odwiedź nas</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- O Bibliotece -->
+    <section id="o-bibliotece" class="section">
+        <div class="container">
+            <div class="card">
+                <div class="card__body">
+                    <h2>🏛️ O Bibliotece Uniwersyteckiej</h2>
+                    <p>Biblioteka Uniwersytecka w Toruniu to nowoczesne centrum wiedzy, które łączy 550-letnią tradycję uniwersytetu z najnowszymi technologiami. Współpracujemy z Biblioteką Narodową w ramach wspólnego katalogu, zapewniając dostęp do milionów zasobów naukowych.</p>
+                    <p>Nasze zbiory obejmują unikalne kolekcje historyczne, współczesne publikacje naukowe oraz rozbudowane zasoby cyfrowe dostępne 24/7.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Usługi -->
+    <section id="uslugi" class="section">
+        <div class="container">
+            <h2 class="section-title">🚀 Nowoczesne Usługi</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">🤖</div>
+                    <h3>AI Assistant</h3>
+                    <p>Primo Research Assistant wykorzystuje sztuczną inteligencję do wyszukiwania w języku naturalnym</p>
+                    <a href="https://szukaj.bu.umk.pl/" target="_blank" class="btn btn--secondary">Asystent AI</a>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">📚</div>
+                    <h3>Katalog Online</h3>
+                    <p>Przeszukuj nasze zbiory w zaawansowanym katalogu dostępnym online</p>
+                    <a href="https://szukaj.bu.umk.pl/" target="_blank" class="btn btn--secondary">Katalog</a>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">💻</div>
+                    <h3>Biblioteka Cyfrowa</h3>
+                    <p>Kujawsko-Pomorska Biblioteka Cyfrowa z tysiącami zdigitalizowanych publikacji</p>
+                    <a href="#" class="btn btn--secondary">KPBC</a>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🔬</div>
+                    <h3>Otwarta Nauka</h3>
+                    <p>Wsparcie w zarządzaniu danymi badawczymi i publikowaniu w otwartym dostępie</p>
+                    <a href="#otwarta-nauka" class="btn btn--secondary">Otwarta Nauka</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Wystawy -->
+    <section id="wystawy" class="section">
+        <div class="container">
+            <div class="card">
+                <div class="card__body">
+                    <h2>🎨 Cyfrowe Wystawy</h2>
+                    <p>Odkryj nasze unikalne kolekcje w formie interaktywnych wystaw cyfrowych. Prezentujemy projekty humanistyki cyfrowej, eksponaty historyczne i współczesne badania w innowacyjnej formie.</p>
+                    <a href="https://expo.bu.umk.pl/" target="_blank" class="btn btn--primary">Odwiedź wystawy</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Statystyki -->
+    <section id="statystyki" class="section">
+        <div class="container">
+            <h2 class="section-title">📊 Biblioteka w Liczbach</h2>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-number" data-target="58276">58,276+</div>
+                    <div class="stat-label">👥 Użytkowników</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number" data-target="173861">173,861</div>
+                    <div class="stat-label">🚶 Odwiedzin rocznie</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number" data-target="415000">415 tys+</div>
+                    <div class="stat-label">📚 Zbiorów w wolnym dostępie</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number" data-target="1150000">1.15 mln+</div>
+                    <div class="stat-label">💻 Sesji elektronicznych</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number" data-target="678000">678 tys+</div>
+                    <div class="stat-label">📱 E-książek</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number" data-target="26800">26.8 tys+</div>
+                    <div class="stat-label">📰 Czasopism elektronicznych</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number" data-target="4000000">4 mln+</div>
+                    <div class="stat-label">👁️ Wyświetleń KPBC</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="kontakt" class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h3>🌌 Biblioteka Uniwersytecka w Toruniu</h3>
+                    <p>Kosmiczne Archiwum Wiedzy UMK</p>
+                    <p>ul. Gagarina 13, 87-100 Toruń</p>
+                </div>
+                <div class="footer-links">
+                    <a href="https://www.bu.umk.pl/kontakt" target="_blank" class="btn btn--primary">📍 Odwiedź nas</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Biblioteka Uniwersytecka w Toruniu | Licencja: <a href="#" target="_blank">CC-BY-SA</a></p>
+                <p class="ai-info">Strona utworzona z wykorzystaniem sztucznej inteligencji</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
 </body>
 </html>
