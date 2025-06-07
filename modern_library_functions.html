@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biblioteka 4.0 - Innowacyjne Centrum Społeczności</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 25%, #f093fb 75%, #f5576c 100%);
+            color: #333;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .header {
+            text-align: center;
+            padding: 50px 0;
+            color: white;
+            position: relative;
+        }
+        
+        .innovation-badge {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.2);
+            padding: 8px 20px;
+            border-radius: 25px;
+            font-size: 0.9em;
+            margin-bottom: 20px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+        
+        .header::before {
+            content: '🚀';
+            font-size: 5em;
+            display: block;
+            margin-bottom: 20px;
+            animation: rocket 4s ease-in-out infinite;
+        }
+        
+        @keyframes rocket {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            25% { transform: translateY(-15px) rotate(5deg); }
+            50% { transform: translateY(-10px) rotate(-3deg); }
+            75% { transform: translateY(-20px) rotate(8deg); }
+        }
+        
+        .header h1 {
+            font-size: 3em;
+            margin-bottom: 15px;
+            text-shadow: 2px 2px 8px rgba(0,0,0,0.3);
+            background: linear-gradient(45deg, #fff, #a8edea, #fed6e3);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .subtitle {
+            font-size: 1.3em;
+            opacity: 0.95;
+            font-weight: 300;
+        }
+        
+        .intro-card {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 25px;
+            padding: 40px;
+            margin: 40px 0;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.15);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .intro-card::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(45deg, transparent, rgba(167, 139, 250, 0.1), transparent);
+            animation: shimmer 3s infinite;
+        }
+        
+        @keyframes shimmer {
+            0% { transform: translateX(-100%) translateY(-100%) rotate(45deg); }
+            100% { transform: translateX(100%) translateY(100%) rotate(45deg); }
+        }
+        
+        .innovation-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+            margin: 50px 0;
+        }
+        
+        .innovation-card {
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+            backdrop-filter: blur(10px);
+        }
+        
+        .innovation-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background: linear-gradient(90deg, #ff6b6b, #4ecdc4, #45b7d1, #f9ca24, #f0932b, #eb4d4b, #6c5ce7);
+            background-size: 300% 100%;
+            animation: gradientMove 3s ease infinite;
+        }
+        
+        @keyframes gradientMove {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        
+        .innovation-card:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 25px 50px rgba(0,0,0,0.2);
+        }
+        
+        .innovation-icon {
+            font-size: 3em;
+            margin-bottom: 20px;
+            display: block;
+            filter: drop-shadow(0 4px 8px rgba(0,0,0,0.1));
+        }
+        
+        .innovation-title {
+            color: #4c51bf;
+            font-size: 1.5em;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+        
+        .innovation-desc {
+            color: #4a5568;
+            margin-bottom: 20px;
+            font-size: 1.05em;
+        }
+        
+        .tech-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.85em;
+            margin: 2px;
+            font-weight: 500;
+        }
+        
+        .highlight {
+            background: linear-gradient(120deg, #a8edea 0%, #fed6e3 100%);
+            padding: 3px 8px;
+            border-radius: 6px;
+            font-weight: 600;
+            color: #2d3748;
+        }
+        
+        .future-vision {
+            background: linear-gradient(135deg, rgba(99, 102, 241, 0.1), rgba(168, 85, 247, 0.1));
+            border-radius: 25px;
+            padding: 40px;
+            margin: 50px 0;
+            border: 2px solid rgba(99, 102, 241, 0.2);
+            position: relative;
+        }
+        
+        .stats-dashboard {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 25px;
+            padding: 40px;
+            margin: 50px 0;
+            backdrop-filter: blur(15px);
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 25px;
+            margin-top: 30px;
+        }
+        
+        .stat-card {
+            padding: 25px;
+            border-radius: 15px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .stat-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            animation: slideIn 2s infinite;
+        }
+        
+        @keyframes slideIn {
+            0% { left: -100%; }
+            50% { left: 100%; }
+            100% { left: 100%; }
+        }
+        
+        .stat-number {
+            font-size: 2.5em;
+            font-weight: 900;
+            display: block;
+            margin-bottom: 5px;
+        }
+        
+        .innovation-message {
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+            color: white;
+            padding: 40px;
+            border-radius: 25px;
+            margin: 50px 0;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .innovation-message::before {
+            content: '💡';
+            font-size: 4em;
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            opacity: 0.3;
+            animation: pulse 2s infinite;
+        }
+        
+        .service-timeline {
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 25px;
+            padding: 40px;
+            margin: 50px 0;
+        }
+        
+        .timeline-item {
+            display: flex;
+            align-items: center;
+            margin: 20px 0;
+            padding: 20px;
+            border-radius: 15px;
+            background: linear-gradient(90deg, #f8f9fa, #e9ecef);
+            transition: all 0.3s ease;
+        }
+        
+        .timeline-item:hover {
+            background: linear-gradient(90deg, #e3f2fd, #bbdefb);
+            transform: translateX(10px);
+        }
+        
+        .timeline-icon {
+            font-size: 2em;
+            margin-right: 20px;
+            min-width: 60px;
+        }
+        
+        .cta-innovation {
+            background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 50%, #fecfef 100%);
+            border-radius: 25px;
+            padding: 40px;
+            text-align: center;
+            margin: 50px 0;
+            color: #2d3748;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .cta-innovation::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+            animation: rotate 10s linear infinite;
+        }
+        
+        @keyframes rotate {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        .pulse {
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.8; transform: scale(1.05); }
+        }
+        
+        .footer {
+            text-align: center;
+            color: rgba(255, 255, 255, 0.9);
+            padding: 30px 0;
+            font-style: italic;
+        }
+        
+        @media (max-width: 768px) {
+            .header h1 { font-size: 2.2em; }
+            .innovation-grid { grid-template-columns: 1fr; }
+            .container { padding: 15px; }
+            .innovation-card { padding: 25px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="innovation-badge">🔬 Zastępca Dyrektora ds. Innowacji i Projektowania Usług</div>
+            <h1>Biblioteka 4.0</h1>
+            <p class="subtitle">Laboratorium Innowacji - Gdzie Przyszłość Spotyka Wiedzę</p>
+        </header>
+        
+        <div class="intro-card">
+            <h2 style="color: #4c51bf; margin-bottom: 20px; font-size: 1.8em;">🎯 Rewolucja w Świecie Bibliotek!</h2>
+            <p style="font-size: 1.1em;">
+                Cześć! Jestem <span class="highlight">Zastępcą Dyrektora ds. Innowacji</span> w Bibliotece Uniwersyteckiej w Toruniu. 
+                Codziennie pracuję nad tym, by nasza biblioteka była nie tylko miejscem przechowywania wiedzy, 
+                ale prawdziwym <strong>laboratorium przyszłości</strong>. Pozwólcie, że pokażę Wam, jak współczesna biblioteka 
+                stała się centrum innowacji technologicznych i społecznych!
+            </p>
+        </div>
+        
+        <div class="innovation-grid">
+            <div class="innovation-card">
+                <span class="innovation-icon">🤖</span>
+                <h3 class="innovation-title">AI & Inteligentne Systemy</h3>
+                <p class="innovation-desc">Chatboty pomagające w wyszukiwaniu, systemy rekomendacji książek oparte na AI, automatyczne tłumaczenie materiałów.</p>
+                <div>
+                    <span class="tech-badge">Machine Learning</span>
+                    <span class="tech-badge">NLP</span>
+                    <span class="tech-badge">Chatbots</span>
+                </div>
+            </div>
+            
+            <div class="innovation-card">
+                <span class="innovation-icon">🥽</span>
+                <h3 class="innovation-title">VR/AR Learning Labs</h3>
+                <p class="innovation-desc">Wirtualne wycieczki po historycznych miejscach, symulacje naukowe, immersyjne doświadczenia edukacyjne.</p>
+                <div>
+                    <span class="tech-badge">Virtual Reality</span>
+                    <span class="tech-badge">Augmented Reality</span>
+                    <span class="tech-badge">3D Learning</span>
+                </div>
+            </div>
+            
+            <div class="innovation-card">
+                <span class="innovation-icon">🏗️</span>
+                <h3 class="innovation-title">Maker Space & FabLab</h3>
+                <p class="innovation-desc">Drukarki 3D, robotyka, elektronika, programowanie. Miejsce, gdzie pomysły stają się rzeczywistością!</p>
+                <div>
+                    <span class="tech-badge">3D Printing</span>
+                    <span class="tech-badge">IoT</span>
+                    <span class="tech-badge">Robotics</span>
+                </div>
+            </div>
+            
+            <div class="innovation-card">
+                <span class="innovation-icon">☁️</span>
+                <h3 class="innovation-title">Cloud & Big Data</h3>
+                <p class="innovation-desc">Analityka zachowań użytkowników, predykcyjne zarządzanie zbiorami, chmurowe repozytoria wiedzy.</p>
+                <div>
+                    <span class="tech-badge">Cloud Computing</span>
+                    <span class="tech-badge">Data Analytics</span>
+                    <span class="tech-badge">Predictive AI</span>
+                </div>
+            </div>
+            
+            <div class="innovation-card">
+                <span class="innovation-icon">🌐</span>
+                <h3 class="innovation-title">Digital Humanities Hub</h3>
+                <p class="innovation-desc">Digitalizacja dziedzictwa kulturowego, cyfrowe archiwum regionu, interaktywne mapy historyczne.</p>
+                <div>
+                    <span class="tech-badge">Digital Heritage</span>
+                    <span class="tech-badge">Interactive Maps</span>
+                    <span class="tech-badge">OCR Technology</span>
+                </div>
+            </div>
+            
+            <div class="innovation-card">
+                <span class="innovation-icon">🎓</span>
+                <h3 class="innovation-title">Adaptive Learning Platform</h3>
+                <p class="innovation-desc">Personalizowane ścieżki nauki, gamifikacja edukacji, certyfikowane kursy online dostosowane do indywidualnych potrzeb.</p>
+                <div>
+                    <span class="tech-badge">Personalization</span>
+                    <span class="tech-badge">Gamification</span>
+                    <span class="tech-badge">Micro-learning</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="future-vision">
+            <h2 style="color: #4c51bf; margin-bottom: 25px; font-size: 2em;">🔮 Wizja Przyszłości</h2>
+            <div class="timeline-item">
+                <span class="timeline-icon">📱</span>
+                <div>
+                    <strong>Smart Library App:</strong> Aplikacja z rozszerzoną rzeczywistością do nawigacji po bibliotece, rezerwacji miejsc i dostępu do usług
+                </div>
+            </div>
+            <div class="timeline-item">
+                <span class="timeline-icon">🏠</span>
+                <div>
+                    <strong>Przestrzenie Hybrydowe:</strong> Fizyczne i wirtualne przestrzenie współpracy, gdzie ludzie spotykają się zarówno osobiście, jak i online
+                </div>
+            </div>
+            <div class="timeline-item">
+                <span class="timeline-icon">🔬</span>
+                <div>
+                    <strong>Research Innovation Lab:</strong> Centrum wspierania startupów naukowych i projektów badawczych z wykorzystaniem zasobów biblioteki
+                </div>
+            </div>
+            <div class="timeline-item">
+                <span class="timeline-icon">🌍</span>
+                <div>
+                    <strong>Global Knowledge Network:</strong> Połączenie z bibliotekami na całym świecie w czasie rzeczywistym
+                </div>
+            </div>
+        </div>
+        
+        <div class="stats-dashboard">
+            <h2 style="color: #4c51bf; text-align: center; margin-bottom: 15px; font-size: 2em;">📊 Innowacje w Liczbach</h2>
+            <p style="text-align: center; color: #666; margin-bottom: 20px;">Nasze osiągnięcia w transformacji cyfrowej</p>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <span class="stat-number">50+</span>
+                    <span>Projektów innowacyjnych rocznie</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number">85%</span>
+                    <span>Usług dostępnych online</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number">200+</span>
+                    <span>Godzin warsztatów tech miesięcznie</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number">95%</span>
+                    <span>Zadowolenie użytkowników</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number">24/7</span>
+                    <span>Dostęp do zasobów cyfrowych</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number">12</span>
+                    <span>Nagród za innowacje</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="innovation-message">
+            <h3 style="margin-bottom: 25px; font-size: 1.8em;">💭 Moja Filozofia Innowacji</h3>
+            <p style="font-size: 1.2em; line-height: 1.8; margin-bottom: 20px;">
+                <strong>"Biblioteka to żywy organizm technologiczny"</strong> - każdego dnia eksperymentujemy z nowymi rozwiązaniami. 
+                Nie boimy się błędów, bo to one uczą nas, jak lepiej służyć naszej społeczności.
+            </p>
+            <p style="font-size: 1.1em; line-height: 1.7;">
+                Współpracujemy z <em>startupami technologicznymi</em>, <em>uniwersytetami</em> i <em>ośrodkami badawczymi</em> 
+                na całym świecie. Nasze motto: <strong>"Tradycja + Technologia = Transformacja"</strong>
+            </p>
+        </div>
+        
+        <div class="service-timeline">
+            <h2 style="color: #4c51bf; text-align: center; margin-bottom: 30px; font-size: 2em;">🛠️ Usługi Przyszłości</h2>
+            <div class="timeline-item">
+                <span class="timeline-icon">🎯</span>
+                <div>
+                    <strong>Personalizowany Asystent AI:</strong> Inteligentny przewodnik dostosowujący się do Twoich zainteresowań i celów naukowych
+                </div>
+            </div>
+            <div class="timeline-item">
+                <span class="timeline-icon">🔍</span>
+                <div>
+                    <strong>Semantyczne Wyszukiwanie:</strong> Znajdź to, czego szukasz, nawet jeśli nie wiesz dokładnie, jak to nazwać
+                </div>
+            </div>
+            <div class="timeline-item">
+                <span class="timeline-icon">🤝</span>
+                <div>
+                    <strong>Collaborative Research Platform:</strong> Narzędzia do wspólnej pracy nad projektami badawczymi w czasie rzeczywistym
+                </div>
+            </div>
+            <div class="timeline-item">
+                <span class="timeline-icon">📊</span>
+                <div>
+                    <strong>Data Visualization Studio:</strong> Profesjonalne narzędzia do tworzenia infografik i wizualizacji danych
+                </div>
+            </div>
+        </div>
+        
+        <div class="cta-innovation">
+            <h2 style="margin-bottom: 20px; font-size: 2.2em;" class="pulse">🚀 Dołącz do Rewolucji!</h2>
+            <p style="font-size: 1.2em; margin-bottom: 25px; line-height: 1.6;">
+                Nie jesteś tylko użytkownikiem - jesteś <strong>współtwórcą przyszłości biblioteki</strong>!
+            </p>
+            <div style="background: rgba(255,255,255,0.8); padding: 25px; border-radius: 15px; margin-top: 25px;">
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; text-align: left;">
+                    <div>
+                        <strong>🔬 Testuj Beta:</strong><br>
+                        Bądź pierwszym, który wypróbuje nasze najnowsze rozwiązania
+                    </div>
+                    <div>
+                        <strong>💡 Współtwórz:</strong><br>
+                        Zgłaszaj pomysły na nowe funkcje i usługi
+                    </div>
+                    <div>
+                        <strong>🎓 Ucz się:</strong><br>
+                        Darmowe warsztaty z najnowszych technologii
+                    </div>
+                    <div>
+                        <strong>🌟 Inspiruj:</strong><br>
+                        Dziel się swoimi projektami i inspiruj innych
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <footer class="footer">
+            <p style="font-size: 1.1em; margin-bottom: 10px;">Biblioteka Uniwersytecka w Toruniu - Laboratorium Przyszłości 🔬✨</p>
+            <p style="font-size: 0.95em;">
+                "Innowacja to nie technologia - to nowy sposób myślenia o służeniu społeczności"
+            </p>
+        </footer>
+    </div>
+    
+    <script>
+        // Zaawansowane animacje przy przewijaniu
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+        
+        const fadeInObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0) scale(1)';
+                }
+            });
+        }, observerOptions);
+        
+        // Inicjalizacja animacji
+        document.querySelectorAll('.innovation-card, .intro-card, .stats-dashboard, .innovation-message, .service-timeline, .future-vision').forEach((el, index) => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(50px) scale(0.95)';
+            el.style.transition = `opacity 0.8s ease ${index * 0.1}s, transform 0.8s ease ${index * 0.1}s`;
+            fadeInObserver.observe(el);
+        });
+        
+        // Animowany licznik dla statystyk
+        const animateCounters = () => {
+            const counters = document.querySelectorAll('.stat-number');
+            counters.forEach(counter => {
+                const target = counter.textContent;
+                const isPercentage = target.includes('%');
+                const number = parseInt(target.replace(/[^\d]/g, ''));
+                let current = 0;
+                const increment = number / 60;
+                const duration = 2000;
+                const stepTime = duration / 60;
+                
+                const timer = setInterval(() => {
+                    current += increment;
+                    if (current >= number) {
+                        counter.textContent = target;
+                        clearInterval(timer);
+                    } else {
+                        const displayValue = Math.floor(current);
+                        counter.textContent = displayValue + (isPercentage ? '%' : (target.includes('+') ? '+' : ''));
+                    }
+                }, stepTime);
+            });
+        };
+        
+        // Observer dla sekcji statystyk
+        const statsObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    setTimeout(animateCounters, 500);
+                    statsObserver.unobserve(entry.target);
+                }
+            });
+        });
+        
+        const statsSection = document.querySelector('.stats-dashboard');
+        if (statsSection) {
+            statsObserver.observe(statsSection);
+        }
+        
+        // Interaktywne efekty hover dla kart
+        document.querySelectorAll('.innovation-card').forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-10px) scale(1.02) rotateY(5deg)';
+            });
+            
+            card.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0) scale(1) rotateY(0deg)';
+            });
+        });
+        
+        // Paralaksa dla nagłówka
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            const header = document.querySelector('.header');
+            if (header) {
+                header.style.transform = `translateY(${scrolled * 0.5}px)`;
+            }
+        });
+    </script>
+</body>
+</html>
