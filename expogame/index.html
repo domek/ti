@@ -18,7 +18,7 @@
                     <p>🎯 Po każdej odpowiedzi poznasz ciekawostki o eksponatach</p>
                     <p>🏆 Odkryj, do której kolekcji pasujesz najbardziej!</p>
                 </div>
-                <button id="start-btn" class="btn btn--primary btn--lg">Rozpocznij Quiz</button>
+                <button class="btn btn--primary btn--lg" onclick="startQuiz()">Rozpocznij Quiz</button>
             </div>
         </div>
 
@@ -29,7 +29,7 @@
                     <div class="progress-fill"></div>
                 </div>
                 <div class="question-counter">
-                    Pytanie <span id="current-question">1</span> z <span id="total-questions">5</span>
+                    <span id="current-question">1</span> z <span id="total-questions">5</span>
                 </div>
             </div>
             
@@ -48,7 +48,7 @@
                 <div class="explanation-text">
                     <p id="explanation-content"></p>
                 </div>
-                <button id="next-button" class="btn btn--primary">Następne pytanie</button>
+                <button class="btn btn--primary" id="next-button" onclick="nextQuestion()">Następne pytanie</button>
             </div>
         </div>
 
@@ -67,7 +67,7 @@
                 </div>
                 
                 <div class="collection-assignment">
-                    <h3>Twój profil odkrywcy:</h3>
+                    <h3>Twoja kolekcja:</h3>
                     <div class="collection-badge">
                         <span id="assigned-collection"></span>
                     </div>
@@ -75,10 +75,12 @@
 
                 <div class="visit-expo">
                     <p>🌟 Odkryj więcej fascynujących zbiorów na platformie:</p>
-                    <a href="https://expo.bu.umk.pl" target="_blank" class="btn btn--outline">Odwiedź expo.bu.umk.pl</a>
+                    <a href="https://expo.bu.umk.pl" target="_blank" class="btn btn--outline">
+                        Odwiedź expo.bu.umk.pl
+                    </a>
                 </div>
 
-                <button id="restart-btn" class="btn btn--primary btn--lg">Zagraj ponownie</button>
+                <button class="btn btn--primary btn--lg" onclick="restartQuiz()">Zagraj ponownie</button>
             </div>
         </div>
     </div>
