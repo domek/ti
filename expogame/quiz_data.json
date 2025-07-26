@@ -1,0 +1,131 @@
+{
+  "questions": [
+    {
+      "id": 1,
+      "question": "Ile średniowiecznych kodeksów znajduje się w zbiorach Biblioteki Uniwersyteckiej w Toruniu?",
+      "options": [
+        "A) 52 kodeksy",
+        "B) 72 kodeksy",
+        "C) 84 kodeksy"
+      ],
+      "correct": 1,
+      "explanation": "W zbiorach Biblioteki Uniwersyteckiej w Toruniu znajdują się 72 średniowieczne kodeksy powstałe od początków XII do początków XVI w. na obszarze Rzeszy Niemieckiej, we Włoszech, w Paryżu, Pradze, w Prusach Krzyżackich oraz w Persji.",
+      "collection": "Rękopisy średniowieczne"
+    },
+    {
+      "id": 2,
+      "question": "Która kolekcja zawiera grafiki artystów wileńskich okresu międzywojennego?",
+      "options": [
+        "A) EODOPEN",
+        "B) Grafika Wileńska 1919-1945",
+        "C) Rękopisy średniowieczne"
+      ],
+      "correct": 1,
+      "explanation": "Kolekcja 'Grafika Wileńska 1919-1945' to największa i najbardziej reprezentatywna kolekcja grafiki wileńskiej okresu międzywojennego w Polsce, zawierająca 746 rycin ponad 60 artystów.",
+      "collection": "Grafika Wileńska"
+    },
+    {
+      "id": 3,
+      "question": "W którym roku ukazało się pierwsze wydanie 'De revolutionibus' Mikołaja Kopernika?",
+      "options": [
+        "A) 1540",
+        "B) 1543",
+        "C) 1566"
+      ],
+      "correct": 1,
+      "explanation": "Pierwsze wydanie 'De revolutionibus orbium coelestium' Mikołaja Kopernika ukazało się w 1543 roku u norymberskiego drukarza Johannesa Petreiusa w nakładzie około 500 egzemplarzy.",
+      "collection": "Kopernikana"
+    },
+    {
+      "id": 4,
+      "question": "Ile dokumentów planuje zdigitalizować projekt EODOPEN?",
+      "options": [
+        "A) 10 000 dokumentów",
+        "B) 15 000 dokumentów",
+        "C) 20 000 dokumentów"
+      ],
+      "correct": 1,
+      "explanation": "Nadrzędnym celem projektu EODOPEN jest digitalizacja i upowszechnienie 15 tysięcy niedostępnych cyfrowo zbiorów pochodzących z XX i XXI wieku.",
+      "collection": "EODOPEN"
+    },
+    {
+      "id": 5,
+      "question": "Co można znaleźć w Wirtualnym Muzeum Informatyki UMK?",
+      "options": [
+        "A) Tylko książki o informatyce",
+        "B) Kolekcję komputerów i serwerów z Wydziału MatInf",
+        "C) Średniowieczne rękopisy"
+      ],
+      "correct": 1,
+      "explanation": "Wirtualne Muzeum Informatyki UMK prezentuje kolekcję komputerów, serwerów i technologii biurowych zgromadzoną na Wydziale Matematyki i Informatyki, w tym Amigę 500, AlphaServer ES40 czy pamięć ferrytową.",
+      "collection": "Informatyka"
+    },
+    {
+      "id": 6,
+      "question": "Jak nazywa się perski rękopis z kolekcji średniowiecznej BU UMK?",
+      "options": [
+        "A) Kronika Pruska",
+        "B) Dīvān Hāfiza",
+        "C) Modlitewnik niderlandzki"
+      ],
+      "correct": 1,
+      "explanation": "Dīvān Hāfiza to perski rękopis zawierający mistyczne liryki jednego z najsłynniejszych perskich poetów, który znajduje się wśród 14 zdigitalizowanych rękopisów średniowiecznych BU UMK.",
+      "collection": "Rękopisy średniowieczne"
+    },
+    {
+      "id": 7,
+      "question": "Kto był twórcą kolekcji grafiki wileńskiej w Bibliotece Uniwersyteckiej w Toruniu?",
+      "options": [
+        "A) Bronisław Jamontt",
+        "B) Jan Kotłowski",
+        "C) Jerzy Hoppen"
+      ],
+      "correct": 1,
+      "explanation": "Jan Kotłowski - historyk sztuki, muzeolog i bibliotekarz, wieloletni kierownik Gabinetu Sztuki - jest głównym twórcą kolekcji grafiki wileńskiej w BU UMK.",
+      "collection": "Grafika Wileńska"
+    },
+    {
+      "id": 8,
+      "question": "Które uniwersytety były związane z powstaniem kolekcji grafiki wileńskiej w Toruniu?",
+      "options": [
+        "A) UW i UJ",
+        "B) Uniwersytet Stefana Batorego w Wilnie i UMK",
+        "C) UWr i UAM"
+      ],
+      "correct": 1,
+      "explanation": "Kolekcja grafiki wileńskiej powstała dzięki wykładowcom i absolwentom Wydziału Sztuk Pięknych Uniwersytetu Stefana Batorego w Wilnie, którzy po 1945 roku przybyli do tworzącego się Uniwersytetu Mikołaja Kopernika w Toruniu.",
+      "collection": "Grafika Wileńska"
+    },
+    {
+      "id": 9,
+      "question": "W ramach którego projektu zdigitalizowano rękopisy średniowieczne BU UMK?",
+      "options": [
+        "A) EODOPEN",
+        "B) POPC",
+        "C) Kreatywna Europa"
+      ],
+      "correct": 1,
+      "explanation": "Rękopisy średniowieczne Biblioteki Uniwersyteckiej w Toruniu zostały zdigitalizowane w ramach projektu POPC (Program Operacyjny Polska Cyfrowa).",
+      "collection": "Rękopisy średniowieczne"
+    },
+    {
+      "id": 10,
+      "question": "Ile egzemplarzy pierwszego wydania 'De revolutionibus' zachowało się do dziś?",
+      "options": [
+        "A) Około 150",
+        "B) Ponad 270",
+        "C) Około 400"
+      ],
+      "correct": 1,
+      "explanation": "Z około 500 egzemplarzy pierwszego wydania 'De revolutionibus' z 1543 roku do naszych czasów zachowało się ponad 270, w tym 14 w Polsce.",
+      "collection": "Kopernikana"
+    }
+  ],
+  "collections": {
+    "Rękopisy średniowieczne": "Miłośnik starożytnych ksiąg i średniowiecznych tajemnic",
+    "Grafika Wileńska": "Ekspert sztuki wileńskiej i międzywojennej grafiki",
+    "EODOPEN": "Badacz literatury XX i XXI wieku",
+    "Kopernikana": "Znawca historii astronomii i rewolucji naukowej",
+    "Informatyka": "Pasjonat historii komputerów i technologii"
+  }
+}

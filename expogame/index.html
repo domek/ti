@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Odkrywca Kolekcji BU UMK</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Start Screen -->
+        <div id="start-screen" class="screen active">
+            <div class="welcome-content">
+                <h1>Odkrywca Kolekcji BU UMK</h1>
+                <p class="subtitle">Sprawdź swoją wiedzę o cyfrowych kolekcjach Biblioteki Uniwersyteckiej w Toruniu</p>
+                <div class="game-description">
+                    <p>📚 Odpowiedz na 5 pytań z różnych kolekcji dostępnych na expo.bu.umk.pl</p>
+                    <p>🎯 Po każdej odpowiedzi poznasz ciekawostki o eksponatach</p>
+                    <p>🏆 Odkryj, do której kolekcji pasujesz najbardziej!</p>
+                </div>
+                <button class="btn btn--primary btn--lg" onclick="startQuiz()">Rozpocznij Quiz</button>
+            </div>
+        </div>
+
+        <!-- Quiz Screen -->
+        <div id="quiz-screen" class="screen">
+            <div class="quiz-header">
+                <div class="progress-bar">
+                    <div class="progress-fill"></div>
+                </div>
+                <div class="question-counter">
+                    <span id="current-question">1</span> z <span id="total-questions">5</span>
+                </div>
+            </div>
+            
+            <div class="question-content">
+                <h2 id="question-text"></h2>
+                <div class="answers" id="answers-container">
+                    <!-- Answers will be inserted here -->
+                </div>
+            </div>
+
+            <div id="explanation-screen" class="explanation hidden">
+                <div class="answer-feedback">
+                    <div id="feedback-icon"></div>
+                    <h3 id="feedback-title"></h3>
+                </div>
+                <div class="explanation-text">
+                    <p id="explanation-content"></p>
+                </div>
+                <button class="btn btn--primary" id="next-button" onclick="nextQuestion()">Następne pytanie</button>
+            </div>
+        </div>
+
+        <!-- Results Screen -->
+        <div id="results-screen" class="screen">
+            <div class="results-content">
+                <h1>Twoje Wyniki!</h1>
+                <div class="score-display">
+                    <div class="score-circle">
+                        <span id="score-text"></span>
+                        <span class="score-label">z 5</span>
+                    </div>
+                    <div class="percentage">
+                        <span id="percentage-text"></span>%
+                    </div>
+                </div>
+                
+                <div class="collection-assignment">
+                    <h3>Twoja kolekcja:</h3>
+                    <div class="collection-badge">
+                        <span id="assigned-collection"></span>
+                    </div>
+                </div>
+
+                <div class="visit-expo">
+                    <p>🌟 Odkryj więcej fascynujących zbiorów na platformie:</p>
+                    <a href="https://expo.bu.umk.pl" target="_blank" class="btn btn--outline">
+                        Odwiedź expo.bu.umk.pl
+                    </a>
+                </div>
+
+                <button class="btn btn--primary btn--lg" onclick="restartQuiz()">Zagraj ponownie</button>
+            </div>
+        </div>
+    </div>
+
+    <footer class="quiz-footer">
+        <p>© 2025 Biblioteka Uniwersytecka UMK | <a href="https://expo.bu.umk.pl" target="_blank">expo.bu.umk.pl</a></p>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
