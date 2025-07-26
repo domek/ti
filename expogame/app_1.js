@@ -35,94 +35,90 @@ const quizData = {
     },
     {
       "id": 5,
-      "question": "Co można znaleźć w Wirtualnym Muzeum Informatyki UMK?",
-      "options": ["A) Tylko książki o informatyce", "B) Kolekcję komputerów i serwerów z Wydziału MatInf", "C) Średniowieczne rękopisy"],
+      "question": "Co charakteryzuje rękopis perski Dīvān Hāfiza z kolekcji BU UMK?",
+      "options": ["A) Jest jedynym egzemplarzem w Polsce", "B) Zawiera 394 karty z miniaturami", "C) Został napisany w XIII wieku"],
       "correct": 1,
-      "explanation": "Wirtualne Muzeum Informatyki UMK prezentuje kolekcję komputerów, serwerów i technologii biurowych zgromadzoną na Wydziale Matematyki i Informatyki, w tym Amigę 500, AlphaServer ES40 czy pamięć ferrytową.",
-      "collection": "Informatyka"
-    },
-    {
-      "id": 6,
-      "question": "Jak nazywa się perski rękopis z kolekcji średniowiecznej BU UMK?",
-      "options": ["A) Kronika Pruska", "B) Dīvān Hāfiza", "C) Modlitewnik niderlandzki"],
-      "correct": 1,
-      "explanation": "Dīvān Hāfiza to perski rękopis zawierający mistyczne liryki jednego z najsłynniejszych perskich poetów, który znajduje się wśród 14 zdigitalizowanych rękopisów średniowiecznych BU UMK.",
+      "explanation": "Rękopis perski Dīvān Hāfiza to wyjątkowy XV-wieczny kodeks liczący 394 karty, bogato zdobiony miniaturami i kaligrafią. Jest jedynym takim rękopisem w polskich zbiorach.",
       "collection": "Rękopisy średniowieczne"
     },
     {
-      "id": 7,
-      "question": "Kto był twórcą kolekcji grafiki wileńskiej w Bibliotece Uniwersyteckiej w Toruniu?",
-      "options": ["A) Bronisław Jamontt", "B) Jan Kotłowski", "C) Jerzy Hoppen"],
+      "id": 6,
+      "question": "Które muzeum wirtualne znajduje się w zbiorach cyfrowych BU UMK?",
+      "options": ["A) Muzeum Historii Torunia", "B) Muzeum Informatyki", "C) Muzeum Kopernika"],
       "correct": 1,
-      "explanation": "Jan Kotłowski - historyk sztuki, muzeolog i bibliotekarz, wieloletni kierownik Gabinetu Sztuki - jest głównym twórcą kolekcji grafiki wileńskiej w BU UMK.",
-      "collection": "Grafika Wileńska"
+      "explanation": "Wirtualne Muzeum Informatyki prezentuje kolekcję zabytkowych komputerów i serwerów z Wydziału Matematyki i Informatyki UMK, dokumentując rozwój technologii informatycznych.",
+      "collection": "Wirtualne Muzeum Informatyki"
+    },
+    {
+      "id": 7,
+      "question": "Jakie wydarzenie dokumentuje kolekcja 'Jubileusze kopernikańskie'?",
+      "options": ["A) Urodziny Kopernika", "B) Rocznice śmierci Kopernika", "C) Obchody kolejnych rocznic Kopernika"],
+      "correct": 2,
+      "explanation": "Kolekcja 'Jubileusze kopernikańskie' dokumentuje obchody kolejnych rocznic związanych z Mikołajem Kopernikiem, gromadząc materiały z różnych okresów historycznych.",
+      "collection": "Dokumenty życia społecznego"
     },
     {
       "id": 8,
-      "question": "Które uniwersytety były związane z powstaniem kolekcji grafiki wileńskiej w Toruniu?",
-      "options": ["A) UW i UJ", "B) Uniwersytet Stefana Batorego w Wilnie i UMK", "C) UWr i UAM"],
+      "question": "Ilu grafików wileńskich reprezentuje kolekcja 'Grafika Wileńska 1919-1945'?",
+      "options": ["A) Około 40 artystów", "B) Ponad 60 artystów", "C) Około 80 artystów"],
       "correct": 1,
-      "explanation": "Kolekcja grafiki wileńskiej powstała dzięki wykładowcom i absolwentom Wydziału Sztuk Pięknych Uniwersytetu Stefana Batorego w Wilnie, którzy po 1945 roku przybyli do tworzącego się Uniwersytetu Mikołaja Kopernika w Toruniu.",
+      "explanation": "Kolekcja 'Grafika Wileńska 1919-1945' prezentuje twórczość ponad 60 artystów wileńskich, dokumentując bogate życie artystyczne Wilna w okresie międzywojennym.",
       "collection": "Grafika Wileńska"
     },
     {
       "id": 9,
-      "question": "W ramach którego projektu zdigitalizowano rękopisy średniowieczne BU UMK?",
-      "options": ["A) EODOPEN", "B) POPC", "C) Kreatywna Europa"],
+      "question": "Z jakiego okresu pochodzą najstarsze rękopisy w kolekcji BU UMK?",
+      "options": ["A) XI wieku", "B) XII wieku", "C) XIII wieku"],
       "correct": 1,
-      "explanation": "Rękopisy średniowieczne Biblioteki Uniwersyteckiej w Toruniu zostały zdigitalizowane w ramach projektu POPC (Program Operacyjny Polska Cyfrowa).",
+      "explanation": "Najstarsze rękopisy w kolekcji Biblioteki Uniwersyteckiej w Toruniu pochodzą z początków XII wieku, reprezentując najwcześniejsze zachowane średniowieczne kodeksy.",
       "collection": "Rękopisy średniowieczne"
     },
     {
       "id": 10,
-      "question": "Ile egzemplarzy pierwszego wydania 'De revolutionibus' zachowało się do dziś?",
-      "options": ["A) Około 150", "B) Ponad 270", "C) Około 400"],
-      "correct": 1,
-      "explanation": "Z około 500 egzemplarzy pierwszego wydania 'De revolutionibus' z 1543 roku do naszych czasów zachowało się ponad 270, w tym 14 w Polsce.",
-      "collection": "Kopernikana"
+      "question": "Co oznacza skrót EODOPEN?",
+      "options": ["A) European Open Digital Archives", "B) Eastern Online Document Project", "C) Elektroniczne Otwarte Dziedzictwo"],
+      "correct": 2,
+      "explanation": "EODOPEN to projekt digitalizacji zbiorów specjalnych wschodniego pogranicza dawnej Rzeczypospolitej, mający na celu udostępnienie cyfrowego dziedzictwa kulturowego.",
+      "collection": "EODOPEN"
+    }
+  ],
+  "profiles": [
+    {
+      "name": "Ekspert Rękopisów Średniowiecznych",
+      "description": "Znasz tajemnice starożytnych kodeksów i potrafisz odczytać historię zapisaną na pergaminie."
+    },
+    {
+      "name": "Znawca Grafiki Wileńskiej",
+      "description": "Doskonale orientujesz się w sztuce wileńskiej okresu międzywojennego."
+    },
+    {
+      "name": "Badacz Kopernikany",
+      "description": "Jesteś ekspertem od spuścizny Mikołaja Kopernika i jego rewolucyjnych odkryć."
+    },
+    {
+      "name": "Specjalista od Digitalizacji",
+      "description": "Rozumiesz znaczenie cyfrowego dziedzictwa i nowoczesnych technologii."
+    },
+    {
+      "name": "Kustosz Zbiorów Muzealnych",
+      "description": "Potrafisz docenić wartość historycznych eksponatów i ich znaczenie kulturowe."
     }
   ],
   "collections": {
-    "Rękopisy średniowieczne": "Miłośnik starożytnych ksiąg i średniowiecznych tajemnic",
-    "Grafika Wileńska": "Ekspert sztuki wileńskiej i międzywojennej grafiki",
-    "EODOPEN": "Badacz literatury XX i XXI wieku",
-    "Kopernikana": "Znawca historii astronomii i rewolucji naukowej",
-    "Informatyka": "Pasjonat historii komputerów i technologii"
+    "Rękopisy średniowieczne": "Ekspert Rękopisów Średniowiecznych",
+    "Grafika Wileńska": "Znawca Grafiki Wileńskiej",
+    "EODOPEN": "Specjalista od Digitalizacji", 
+    "Kopernikana": "Badacz Kopernikany",
+    "Dokumenty życia społecznego": "Badacz Kopernikany",
+    "Wirtualne Muzeum Informatyki": "Kustosz Zbiorów Muzealnych"
   }
 };
 
-// Game state
+// Game state variables
 let currentQuestions = [];
 let currentQuestionIndex = 0;
 let score = 0;
-let selectedQuestions = [];
 let collectionCounts = {};
-
-// Initialize the game
-function initializeGame() {
-    console.log('Initializing game...');
-    showScreen('start-screen');
-}
-
-// Start the quiz
-function startQuiz() {
-    console.log('Starting quiz...');
-    
-    // Reset game state
-    currentQuestionIndex = 0;
-    score = 0;
-    collectionCounts = {};
-    
-    // Randomly select 5 questions
-    selectedQuestions = getRandomQuestions(5);
-    currentQuestions = selectedQuestions;
-    
-    console.log('Selected questions:', currentQuestions);
-    
-    // Show quiz screen and first question
-    showScreen('quiz-screen');
-    showQuestion();
-}
 
 // Get random questions from the pool
 function getRandomQuestions(count) {
@@ -136,46 +132,55 @@ function showScreen(screenId) {
     
     // Hide all screens
     const screens = document.querySelectorAll('.screen');
-    screens.forEach(screen => {
-        screen.classList.remove('active');
-    });
+    screens.forEach(screen => screen.classList.remove('active'));
     
     // Show target screen
     const targetScreen = document.getElementById(screenId);
     if (targetScreen) {
         targetScreen.classList.add('active');
-        targetScreen.classList.add('fade-in');
-        console.log('Screen shown successfully:', screenId);
-    } else {
-        console.error('Screen not found:', screenId);
+        return true;
     }
+    return false;
+}
+
+// Start the quiz
+function startQuiz() {
+    console.log('Starting quiz...');
+    
+    // Reset game state
+    currentQuestionIndex = 0;
+    score = 0;
+    collectionCounts = {};
+    
+    // Select random questions
+    currentQuestions = getRandomQuestions(5);
+    
+    // Show quiz screen and first question
+    showScreen('quiz-screen');
+    showQuestion();
 }
 
 // Display current question
 function showQuestion() {
-    console.log('Showing question:', currentQuestionIndex);
-    
     const question = currentQuestions[currentQuestionIndex];
-    if (!question) {
-        console.error('No question found at index:', currentQuestionIndex);
-        return;
-    }
+    if (!question) return;
     
     // Update progress
-    updateProgress();
+    const progressFill = document.querySelector('.progress-fill');
+    if (progressFill) {
+        const progress = (currentQuestionIndex / currentQuestions.length) * 100;
+        progressFill.style.width = progress + '%';
+    }
     
-    // Update question counter
+    // Update counter
     const currentQuestionEl = document.getElementById('current-question');
     const totalQuestionsEl = document.getElementById('total-questions');
-    
     if (currentQuestionEl) currentQuestionEl.textContent = currentQuestionIndex + 1;
     if (totalQuestionsEl) totalQuestionsEl.textContent = currentQuestions.length;
     
     // Update question text
     const questionTextEl = document.getElementById('question-text');
-    if (questionTextEl) {
-        questionTextEl.textContent = question.question;
-    }
+    if (questionTextEl) questionTextEl.textContent = question.question;
     
     // Create answer options
     const answersContainer = document.getElementById('answers-container');
@@ -200,49 +205,32 @@ function showQuestion() {
 
 // Handle answer selection
 function selectAnswer(selectedIndex) {
-    console.log('Answer selected:', selectedIndex);
-    
     const question = currentQuestions[currentQuestionIndex];
     const isCorrect = selectedIndex === question.correct;
     
     // Update score
-    if (isCorrect) {
-        score++;
-    }
+    if (isCorrect) score++;
     
-    // Count collection for final assignment
+    // Count collection
     const collection = question.collection;
     collectionCounts[collection] = (collectionCounts[collection] || 0) + 1;
     
-    // Show visual feedback
-    showAnswerFeedback(selectedIndex, question.correct, isCorrect);
+    // Show feedback on buttons
+    const answerButtons = document.querySelectorAll('.answer-option');
+    answerButtons.forEach((button, index) => {
+        button.disabled = true;
+        if (index === question.correct) {
+            button.classList.add('correct');
+        } else if (index === selectedIndex && !isCorrect) {
+            button.classList.add('incorrect');
+        }
+    });
     
     // Show explanation
     showExplanation(isCorrect, question.explanation);
 }
 
-// Show answer feedback
-function showAnswerFeedback(selectedIndex, correctIndex, isCorrect) {
-    const answerButtons = document.querySelectorAll('.answer-option');
-    
-    // Disable all buttons
-    answerButtons.forEach(button => {
-        button.classList.add('disabled');
-        button.style.pointerEvents = 'none';
-    });
-    
-    // Highlight correct answer
-    if (answerButtons[correctIndex]) {
-        answerButtons[correctIndex].classList.add('correct');
-    }
-    
-    // Highlight selected answer if incorrect
-    if (!isCorrect && answerButtons[selectedIndex]) {
-        answerButtons[selectedIndex].classList.add('incorrect');
-    }
-}
-
-// Show explanation screen
+// Show explanation
 function showExplanation(isCorrect, explanationText) {
     const explanationScreen = document.getElementById('explanation-screen');
     const feedbackIcon = document.getElementById('feedback-icon');
@@ -250,40 +238,26 @@ function showExplanation(isCorrect, explanationText) {
     const explanationContent = document.getElementById('explanation-content');
     const nextButton = document.getElementById('next-button');
     
-    if (!explanationScreen || !feedbackIcon || !feedbackTitle || !explanationContent || !nextButton) {
-        console.error('Missing explanation screen elements');
-        return;
+    if (feedbackIcon) {
+        feedbackIcon.textContent = isCorrect ? '✅' : '❌';
     }
-    
-    // Set feedback based on correctness
-    if (isCorrect) {
-        feedbackIcon.textContent = '✅';
-        feedbackTitle.textContent = 'Brawo! Prawidłowa odpowiedź!';
-        feedbackTitle.style.color = 'var(--color-success)';
-    } else {
-        feedbackIcon.textContent = '❌';
-        feedbackTitle.textContent = 'Nieprawidłowa odpowiedź';
-        feedbackTitle.style.color = 'var(--color-error)';
+    if (feedbackTitle) {
+        feedbackTitle.textContent = isCorrect ? 'Brawo! Prawidłowa odpowiedź!' : 'Nieprawidłowa odpowiedź';
+        feedbackTitle.style.color = isCorrect ? 'var(--color-success)' : 'var(--color-error)';
     }
-    
-    // Set explanation text
-    explanationContent.textContent = explanationText;
-    
-    // Update next button text
-    if (currentQuestionIndex === currentQuestions.length - 1) {
-        nextButton.textContent = 'Zobacz wyniki';
-    } else {
-        nextButton.textContent = 'Następne pytanie';
+    if (explanationContent) {
+        explanationContent.textContent = explanationText;
     }
-    
-    // Show explanation
-    explanationScreen.classList.remove('hidden');
+    if (nextButton) {
+        nextButton.textContent = currentQuestionIndex === currentQuestions.length - 1 ? 'Zobacz wyniki' : 'Następne pytanie';
+    }
+    if (explanationScreen) {
+        explanationScreen.classList.remove('hidden');
+    }
 }
 
 // Move to next question or show results
 function nextQuestion() {
-    console.log('Moving to next question or results');
-    
     currentQuestionIndex++;
     
     if (currentQuestionIndex < currentQuestions.length) {
@@ -293,33 +267,19 @@ function nextQuestion() {
     }
 }
 
-// Show results screen
+// Show results
 function showResults() {
-    console.log('Showing results');
-    
     showScreen('results-screen');
     
-    // Calculate percentage
     const percentage = Math.round((score / currentQuestions.length) * 100);
     
-    // Update score display
     const scoreTextEl = document.getElementById('score-text');
     const percentageTextEl = document.getElementById('percentage-text');
     
     if (scoreTextEl) scoreTextEl.textContent = score;
     if (percentageTextEl) percentageTextEl.textContent = percentage;
     
-    // Determine assigned collection
-    const assignedCollection = determineCollection();
-    const assignedCollectionEl = document.getElementById('assigned-collection');
-    if (assignedCollectionEl) {
-        assignedCollectionEl.textContent = assignedCollection;
-    }
-}
-
-// Determine which collection the user fits best
-function determineCollection() {
-    // Find the collection with the most questions answered
+    // Determine profile
     let maxCount = 0;
     let bestCollection = '';
     
@@ -330,32 +290,42 @@ function determineCollection() {
         }
     }
     
-    // If no clear winner, pick a random collection
-    if (!bestCollection || maxCount === 0) {
-        const collections = Object.keys(quizData.collections);
-        bestCollection = collections[Math.floor(Math.random() * collections.length)];
+    let profileName = quizData.collections[bestCollection];
+    if (!profileName) {
+        profileName = quizData.profiles[Math.floor(Math.random() * quizData.profiles.length)].name;
     }
     
-    return quizData.collections[bestCollection];
-}
-
-// Update progress bar
-function updateProgress() {
-    const progressFill = document.querySelector('.progress-fill');
-    if (progressFill) {
-        const progress = ((currentQuestionIndex) / currentQuestions.length) * 100;
-        progressFill.style.width = `${progress}%`;
+    const assignedCollectionEl = document.getElementById('assigned-collection');
+    if (assignedCollectionEl) {
+        assignedCollectionEl.textContent = profileName;
     }
 }
 
-// Restart the quiz
+// Restart quiz
 function restartQuiz() {
-    console.log('Restarting quiz');
     startQuiz();
 }
 
-// Initialize the game when the page loads
+// Initialize when DOM is ready
 document.addEventListener('DOMContentLoaded', function() {
-    console.log('DOM loaded, initializing game');
-    initializeGame();
+    console.log('DOM loaded, initializing...');
+    
+    // Show start screen
+    showScreen('start-screen');
+    
+    // Add event listeners
+    const startBtn = document.getElementById('start-btn');
+    if (startBtn) {
+        startBtn.addEventListener('click', startQuiz);
+    }
+    
+    const nextBtn = document.getElementById('next-button');
+    if (nextBtn) {
+        nextBtn.addEventListener('click', nextQuestion);
+    }
+    
+    const restartBtn = document.getElementById('restart-btn');
+    if (restartBtn) {
+        restartBtn.addEventListener('click', restartQuiz);
+    }
 });
