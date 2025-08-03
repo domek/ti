@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Średniowieczny Herb Interaktywny - Odkryj tajemnice heraldycznych symboli</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div class="loading-screen" id="loadingScreen">
+        <div class="loading-content">
+            <div class="medieval-spinner"></div>
+            <h2 class="loading-title">Ładowanie średniowiecznego manuskryptu...</h2>
+            <div class="loading-progress">
+                <div class="progress-bar" id="progressBar"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Application -->
+    <div class="app-container hidden" id="appContainer">
+        <header class="hero-header">
+            <div class="hero-background"></div>
+            <div class="hero-content">
+                <h1 class="hero-title">Średniowieczny Herb Interaktywny</h1>
+                <p class="hero-subtitle">Odkryj tajemnice heraldycznych symboli</p>
+                <div class="hero-instructions">
+                    <p>Kliknij złote punkty, aby poznać znaczenie każdego symbolu</p>
+                </div>
+            </div>
+            <div class="scroll-indicator">
+                <div class="scroll-arrow"></div>
+            </div>
+        </header>
+
+        <main class="main-content">
+            <div class="manuscript-container">
+                <!-- Interactive Image Container -->
+                <div class="image-viewer" id="imageViewer">
+                    <div class="image-frame">
+                        <img 
+                            src="06_MG_8928_raw_opt.jpg" 
+                            alt="Medieval illuminated coat of arms manuscript with detailed heraldic symbols"
+                            class="manuscript-image"
+                            id="manuscriptImage"
+                        >
+                        
+                        <!-- Hotspots with precise coordinates -->
+                        <div class="hotspot" data-id="pelican" style="left: 50%; top: 12%;" tabindex="0" role="button" aria-label="Poznaj więcej o Pelikanie Ofiarnym">
+                            <div class="hotspot-pulse"></div>
+                            <div class="hotspot-core"></div>
+                            <div class="hotspot-tooltip">Pelikan Ofiarny</div>
+                        </div>
+                        
+                        <div class="hotspot" data-id="crown" style="left: 50%; top: 28%;" tabindex="0" role="button" aria-label="Poznaj więcej o Koronie Królewskiej">
+                            <div class="hotspot-pulse"></div>
+                            <div class="hotspot-core"></div>
+                            <div class="hotspot-tooltip">Korona Królewska</div>
+                        </div>
+                        
+                        <div class="hotspot" data-id="wildman_left" style="left: 18%; top: 50%;" tabindex="0" role="button" aria-label="Poznaj więcej o Dzikim Człowieku Strażniku">
+                            <div class="hotspot-pulse"></div>
+                            <div class="hotspot-core"></div>
+                            <div class="hotspot-tooltip">Dziki Człowiek Strażnik</div>
+                        </div>
+                        
+                        <div class="hotspot" data-id="wildman_right" style="left: 82%; top: 50%;" tabindex="0" role="button" aria-label="Poznaj więcej o Dzikim Człowieku Obrońcy">
+                            <div class="hotspot-pulse"></div>
+                            <div class="hotspot-core"></div>
+                            <div class="hotspot-tooltip">Dziki Człowiek Obrońca</div>
+                        </div>
+                        
+                        <div class="hotspot" data-id="lion_left" style="left: 35%; top: 45%;" tabindex="0" role="button" aria-label="Poznaj więcej o Lwie Heraldycznym">
+                            <div class="hotspot-pulse"></div>
+                            <div class="hotspot-core"></div>
+                            <div class="hotspot-tooltip">Lew Heraldyczny</div>
+                        </div>
+                        
+                        <div class="hotspot" data-id="lion_right" style="left: 65%; top: 45%;" tabindex="0" role="button" aria-label="Poznaj więcej o Lwie Władczym">
+                            <div class="hotspot-pulse"></div>
+                            <div class="hotspot-core"></div>
+                            <div class="hotspot-tooltip">Lew Władczy</div>
+                        </div>
+                        
+                        <div class="hotspot" data-id="dragon" style="left: 65%; top: 65%;" tabindex="0" role="button" aria-label="Poznaj więcej o Smoku Heraldycznym">
+                            <div class="hotspot-pulse"></div>
+                            <div class="hotspot-core"></div>
+                            <div class="hotspot-tooltip">Smok Heraldyczny</div>
+                        </div>
+                        
+                        <div class="hotspot" data-id="sun_symbol" style="left: 50%; top: 55%;" tabindex="0" role="button" aria-label="Poznaj więcej o Symbolu Słonecznym">
+                            <div class="hotspot-pulse"></div>
+                            <div class="hotspot-core"></div>
+                            <div class="hotspot-tooltip">Symbol Słoneczny</div>
+                        </div>
+                        
+                        <div class="hotspot" data-id="lower_left" style="left: 35%; top: 65%;" tabindex="0" role="button" aria-label="Poznaj więcej o Polu Heraldycznym">
+                            <div class="hotspot-pulse"></div>
+                            <div class="hotspot-core"></div>
+                            <div class="hotspot-tooltip">Pole Heraldyczne</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Information Modal -->
+        <div class="modal-overlay hidden" id="modalOverlay">
+            <div class="info-modal" id="infoModal">
+                <div class="modal-header">
+                    <h3 class="modal-title" id="modalTitle"></h3>
+                    <p class="modal-subtitle" id="modalSubtitle"></p>
+                    <button class="modal-close" id="modalClose" aria-label="Zamknij">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="18" y1="6" x2="6" y2="18"></line>
+                            <line x1="6" y1="6" x2="18" y2="18"></line>
+                        </svg>
+                    </button>
+                </div>
+                <div class="modal-content">
+                    <p class="modal-description" id="modalDescription"></p>
+                    <div class="modal-symbolism">
+                        <strong>Symbolika:</strong>
+                        <span id="modalSymbolism"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="app-footer">
+            <div class="footer-content">
+                <p>Wystawa Cyfrowa - Dziedzictwo Kulturowe Heraldyki Średniowiecznej</p>
+                <div class="footer-ornament"></div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
