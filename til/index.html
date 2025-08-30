@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toruń Interaction Lab (TIL) - Innovative Research Concept</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .header p {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+
+        .mindmap {
+            padding: 40px;
+            background: #f8f9fa;
+        }
+
+        .root-topic {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .root-title {
+            background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
+            color: white;
+            padding: 20px 40px;
+            border-radius: 50px;
+            font-size: 1.8em;
+            font-weight: bold;
+            display: inline-block;
+            box-shadow: 0 10px 20px rgba(231, 76, 60, 0.3);
+            transform: translateY(0);
+            transition: transform 0.3s ease;
+        }
+
+        .root-title:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(231, 76, 60, 0.4);
+        }
+
+        .main-branches {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            margin-top: 40px;
+        }
+
+        .branch {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .branch:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+        }
+
+        .branch-title {
+            background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
+            color: white;
+            padding: 15px 25px;
+            border-radius: 25px;
+            font-size: 1.4em;
+            font-weight: bold;
+            margin-bottom: 25px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(52, 152, 219, 0.3);
+        }
+
+        .sub-branch {
+            margin: 20px 0;
+            padding: 20px;
+            background: #f8f9fa;
+            border-radius: 10px;
+            border-left: 5px solid #3498db;
+            transition: all 0.3s ease;
+        }
+
+        .sub-branch:hover {
+            background: #e9ecef;
+            border-left-color: #e74c3c;
+            transform: translateX(10px);
+        }
+
+        .sub-title {
+            font-size: 1.2em;
+            font-weight: 600;
+            color: #2c3e50;
+            margin-bottom: 15px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .sub-title::after {
+            content: "▼";
+            font-size: 0.8em;
+            transition: transform 0.3s ease;
+        }
+
+        .sub-title.collapsed::after {
+            transform: rotate(-90deg);
+        }
+
+        .sub-items {
+            margin-left: 20px;
+            transition: all 0.3s ease;
+        }
+
+        .sub-items.hidden {
+            display: none;
+        }
+
+        .item {
+            background: white;
+            padding: 12px 18px;
+            margin: 8px 0;
+            border-radius: 8px;
+            border-left: 3px solid #27ae60;
+            font-size: 1em;
+            color: #34495e;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+        }
+
+        .item:hover {
+            background: #ecf0f1;
+            transform: translateX(5px);
+            border-left-color: #e74c3c;
+        }
+
+        .sub-sub-items {
+            margin-left: 20px;
+            margin-top: 10px;
+        }
+
+        .sub-sub-item {
+            background: #fff3cd;
+            border-left: 3px solid #ffc107;
+            padding: 8px 15px;
+            margin: 5px 0;
+            border-radius: 5px;
+            font-size: 0.9em;
+            color: #856404;
+        }
+
+        .controls {
+            text-align: center;
+            margin: 30px 0;
+        }
+
+        .btn {
+            background: linear-gradient(135deg, #27ae60 0%, #2ecc71 100%);
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 25px;
+            font-size: 1em;
+            cursor: pointer;
+            margin: 0 10px;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(39, 174, 96, 0.3);
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(39, 174, 96, 0.4);
+        }
+
+        .footer {
+            background: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            font-size: 0.9em;
+        }
+
+        @media (max-width: 768px) {
+            .main-branches {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+            
+            .header h1 {
+                font-size: 2em;
+            }
+            
+            .root-title {
+                font-size: 1.4em;
+                padding: 15px 30px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>💡 Innovative Research Concept</h1>
+            <p>Interactive visualization of project structure</p>
+        </div>
+
+        <div class="mindmap">
+            <div class="root-topic">
+                <div class="root-title">Toruń Interaction Lab (TIL)</div>
+            </div>
+
+            <div class="controls">
+                <button class="btn" onclick="expandAll()">🔓 Expand All</button>
+                <button class="btn" onclick="collapseAll()">🔒 Collapse All</button>
+            </div>
+
+            <div class="main-branches">
+                <!-- Overview Branch -->
+                <div class="branch">
+                    <div class="branch-title">📋 Overview</div>
+                    
+                    <div class="sub-branch">
+                        <div class="item">🎯 Strategic initiative for NCU</div>
+                    </div>
+                    
+                    <div class="sub-branch">
+                        <div class="item">🔬 Focus on quantitative multimodal interaction research</div>
+                    </div>
+                    
+                    <div class="sub-branch">
+                        <div class="item">🤝 Addressing university-wide research collaboration gaps</div>
+                    </div>
+                </div>
+
+                <!-- Goals Branch -->
+                <div class="branch">
+                    <div class="branch-title">🎯 Goals</div>
+                    
+                    <div class="sub-branch">
+                        <div class="sub-title" onclick="toggleSection(this)">
+                            🏢 Goal 1: University-wide Hub
+                        </div>
+                        <div class="sub-items">
+                            <div class="item">📊 High-precision measurement of human interaction</div>
+                            <div class="item">🔗 Enable horizontal collaboration</div>
+                            <div class="item">🔧 Access to advanced equipment</div>
+                            <div class="item">👥 All-round expert support</div>
+                            <div class="item">📋 Standardized protocols</div>
+                            <div class="item">🎓 Microcredential training programs</div>
+                        </div>
+                    </div>
+                    
+                    <div class="sub-branch">
+                        <div class="sub-title" onclick="toggleSection(this)">
+                            🔬 Goal 2: Core Scientific Agenda
+                        </div>
+                        <div class="sub-items">
+                            <div class="item">📈 Develop rigorous methodologies for human communication</div>
+                            <div class="item">🌐 Extend beyond vision + sound</div>
+                            
+                            <div class="item">
+                                🔧 Integrate:
+                                <div class="sub-sub-items">
+                                    <div class="sub-sub-item">👃 Olfactory stimuli</div>
+                                    <div class="sub-sub-item">✋ Haptic interactions</div>
+                                </div>
+                            </div>
+                            
+                            <div class="item">
+                                💻 Utilize technologies:
+                                <div class="sub-sub-items">
+                                    <div class="sub-sub-item">🥽 Coordinated VR/XR</div>
+                                    <div class="sub-sub-item">👁️ Eye-tracking</div>
+                                    <div class="sub-sub-item">🏃 Motion capture</div>
+                                    <div class="sub-sub-item">📊 Physiological measurement</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>📅 Generated: <span id="currentDate"></span> | 🔬 Toruń Interaction Lab (TIL)</p>
+        </div>
+    </div>
+
+    <script>
+        // Set current date
+        document.getElementById('currentDate').textContent = new Date().toLocaleDateString('en-US');
+
+        // Toggle section functionality
+        function toggleSection(element) {
+            const items = element.nextElementSibling;
+            const isHidden = items.classList.contains('hidden');
+            
+            if (isHidden) {
+                items.classList.remove('hidden');
+                element.classList.remove('collapsed');
+            } else {
+                items.classList.add('hidden');
+                element.classList.add('collapsed');
+            }
+        }
+
+        // Expand all sections
+        function expandAll() {
+            const allItems = document.querySelectorAll('.sub-items');
+            const allTitles = document.querySelectorAll('.sub-title');
+            
+            allItems.forEach(item => item.classList.remove('hidden'));
+            allTitles.forEach(title => title.classList.remove('collapsed'));
+        }
+
+        // Collapse all sections
+        function collapseAll() {
+            const allItems = document.querySelectorAll('.sub-items');
+            const allTitles = document.querySelectorAll('.sub-title');
+            
+            allItems.forEach(item => item.classList.add('hidden'));
+            allTitles.forEach(title => title.classList.add('collapsed'));
+        }
+
+        // Add smooth scrolling for better UX
+        document.querySelectorAll('.item').forEach(item => {
+            item.addEventListener('click', function() {
+                this.style.background = '#d4edda';
+                setTimeout(() => {
+                    this.style.background = '';
+                }, 1000);
+            });
+        });
+
+        // Initialize with some sections expanded by default
+        document.addEventListener('DOMContentLoaded', function() {
+            expandAll();
+        });
+    </script>
+</body>
+</html>
